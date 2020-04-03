@@ -1,0 +1,5 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "python.pythonPath": "C:\\Users\\eipr\\.virtualenvs\\verilog-langserver-0de8eocf\\Scripts\\python.exe",
+    "python.linting.enabled": true,
+}
