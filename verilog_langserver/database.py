@@ -21,21 +21,3 @@ class Database:
         pass
 
 
-class File:
-    def __init__(self, filename):
-        self.filename = filename
-        self.objects = {}
-
-class Declaration:
-    def __init__(self):
-        self.name = None
-        self.type = None
-        self.file = None
-        self.start = None
-        self.end = None
-
-
-class Defines(Declaration):
-    pass
-
-

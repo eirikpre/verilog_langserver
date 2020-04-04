@@ -1,10 +1,10 @@
-lexer grammar VerilogLexer;
+lexer grammar LexRules;
 
-channels { ERROR, PREPROCESS }
+// channels { ERROR, PREPROCESS }
 
 // Configuration
-SINGLELINE_COMMENT: '//' (~[\n])* '\n' ->  channel(HIDDEN);
-MULTILINE_COMMENT : '/*' .*? '*/'      ->  channel(HIDDEN);
+SINGLELINE_COMMENT: '//' (~[\n])* '\n' -> skip;
+MULTILINE_COMMENT : '/*' .*? '*/'      -> skip;
 
 SPACE  : ' '        -> skip;
 TAB    : '\t'       -> skip;
@@ -12,64 +12,19 @@ NEWLINE: '\r'? '\n' -> skip;
 
 STRING: '"' (~["] | '\\"')* '"' ;
 
-COMPILER_DIRECTIVE: GRAVE [a-zA-Z]+ .*? ~[\\]'\n' -> channel(PREPROCESS);
-
-WORD     : CHAR+;
-SEMICOLON: ';';
-
-// Identifiers
-Identifier: WORD;
-Label: COLON Identifier;
+// COMPILER_DIRECTIVE: GRAVE [a-zA-Z]+ .*? ~[\\]'\n' -> channel(PREPROCESS);
 
 
-// ====================
-//       Keywords
-// ====================
-Begin       : 'begin';
-End         : 'end';
-Task        : 'task';
-Endtask     : 'endtask';
-Randcase    : 'randcase';
-Case        : 'case';
-Endcase     : 'endcase';
-Class       : 'class';
-Endclass    : 'endclass';
-Table       : 'table';
-Endtable    : 'endtable';
-Config      : 'config';
-Endconfig   : 'endconfig';
-Module      : 'module';
-Endmodule   : 'endmodule';
-Specify     : 'specify';
-Endspecify  : 'endspecify';
-Package     : 'package';
-Endpackage  : 'endpackage';
-Program     : 'program';
-Endprogram  : 'endprogram';
-Coverage    : 'coverage';
-Endcoverage : 'endcoverage';
-Property    : 'property';
-Endproperty : 'endproperty';
-Sequence    : 'sequence';
-Endsequence : 'endsequence';
-Function    : 'function';
-Endfunction : 'endfunction';
-Clocking    : 'clocking';
-Endclocking : 'endclocking';
-Generate    : 'generate';
-Endgenerate : 'endgenerate';
-Primitive   : 'primitive';
-Endprimitive: 'endprimitive';
-Interface   : 'interface';
-Endinterface: 'endinterface';
-
-If     : 'if';
-Else   : 'else';
-Disable: 'disable';
-Fork   : 'fork';
-Join   : 'join' | 'join_any' | 'join_all';
-Virtual: 'virtual';
-
+COLON       : ':';
+SEMICOLON   : ';';
+PAR_OPEN    : '(';
+PAR_CLOSE   : ')';
+SQUARE_OPEN : '[';
+SQUARE_CLOSE: ']';
+CURLY_OPEN  : '{';
+CURLY_CLOSE : '}';
+COMMA       : ',';
+WORD        : CHAR+;
 
 
 // Numbers
@@ -103,12 +58,13 @@ fragment GRAVE     : [´];
 fragment APOSTROPHE: ['];
 fragment UNDERSCORE: [_];
 fragment DOT       : [.];
-fragment COLON     : [:];
+
+
 fragment SIGN      : [+-];
 fragment TIME_UNIT : ([munpf])?[s];
 fragment X         : [xX];
 fragment Z         : [zZ?];
-fragment CHAR      : [0-9A-z];
+fragment CHAR      : [0-9A-Za-z];
 fragment DIGIT     : [0-9];
 
 fragment NON_ZERO_DIGIT: [1-9];
@@ -122,9 +78,3 @@ fragment BINARY_BASE : APOSTROPHE [bB];
 fragment OCTAL_BASE  : APOSTROPHE [oO];
 fragment HEX_BASE    : APOSTROPHE [hH];
 
-fragment PAR_OPEN    : '(';
-fragment PAR_CLOSE   : '(';
-fragment SQUARE_OPEN : '[';
-fragment SQUARE_CLOSE: ']';
-fragment CURLY_OPEN  : '{';
-fragment CURLY_CLOSE : '}';

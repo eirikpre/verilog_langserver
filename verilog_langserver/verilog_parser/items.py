@@ -1,20 +1,30 @@
-from .grammar.VerilogParser import VerilogParser
+from antlr4 import ParserRuleContext
+from .grammar.SystemVerilogParser import SystemVerilogParser as Parser
+from pygls.types import Location, SymbolInformation, Range, Position, SymbolKind
 
-class Item:
-    def __init__(self, name, file, start, end):
-        """all Items must have name, file, start and end"""
-        self.name = None
-        # self.type = None
-        self.file = None
-        self.start = None
-        self.end = None
+class Symbol(SymbolInformation):
+    def __init__(self, filename, ctx: ParserRuleContext):
+        self.name = ctx.getChild(0, Parser.IdentifierContext).start.text
+        self.kind = None
+        self.containerName = None
+        self.location = Location(filename,
+            Range(
+            start=Position(ctx.start.line, ctx.start.column),
+            end=Position(ctx.stop.line, ctx.stop.column)
+        ))
 
-class Module(Item):
-    def __init__(self, ctx: VerilogParser.Module_declarationContext):
+class Module(Symbol):
+    def __init__(self, fname, ctx: ParserRuleContext):
+        super().__init__(fname, ctx)
+        self.kind = SymbolKind.Module
 
-        super.__init__()
+
+class Interface(Symbol):
+    def __init__(self, fname, ctx: ParserRuleContext):
+        super().__init__(fname, ctx)
+        self.kind = SymbolKind.Interface
 
 
-class Defines(Item):
+class Defines(Symbol):
     pass
 

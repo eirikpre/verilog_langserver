@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Unittest",
+            "type": "python",
+            "request": "launch",
+            "module": "unittest",
+            "args": [
+                "discover",
+                "-s", "tests",
+                "-v"
+            ],
+            "preLaunchTask": "build antlr"
+        },
+        {
             "type": "antlr-debug",
             "request": "launch",
             "name": "Debug Current Grammar",

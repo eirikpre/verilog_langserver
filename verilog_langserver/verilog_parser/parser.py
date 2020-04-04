@@ -1,10 +1,12 @@
 import sys
 import antlr4
 
-from .grammar.VerilogLexer import VerilogLexer
-from .grammar.VerilogParser import VerilogParser
-from .grammar.VerilogParserListener import VerilogParserListener
-from .grammar.VerilogParserVisitor import VerilogParserVisitor
+from .grammar.SystemVerilogLexer import SystemVerilogLexer
+from .grammar.SystemVerilogParser import SystemVerilogParser
+from .grammar.SystemVerilogListener import SystemVerilogListener
+from .grammar.SystemVerilogVisitor import SystemVerilogVisitor
+
+from .fast_visitor import FastVisitor
 
 
 class Parser:
@@ -14,19 +16,22 @@ class Parser:
 
     def parse_full(self, filename):
         input_stream = antlr4.FileStream(filename)
-        lexer = VerilogLexer(input_stream)
+        lexer = SystemVerilogLexer(input_stream)
         stream = antlr4.CommonTokenStream(lexer)
-        parser = VerilogParser(stream)
+        parser = SystemVerilogParser(stream)
         tree = parser.source()
 
         # walker = antlr4.ParseTreeWalker()
         return tree
 
-    def parse_fast(self, filename):
-        pass
+    def parse_fast(self, fname):
+        input_stream = antlr4.FileStream(fname)
+        lexer = SystemVerilogLexer(input_stream)
+        stream = antlr4.CommonTokenStream(lexer)
+        parser = SystemVerilogParser(stream)
+        tree = parser.source()
 
+        visitor = FastVisitor(fname)
+        result = visitor.visit(tree)
 
-class File:
-    def __init__(self, filename):
-        self.filename = filename
-        self.items = {}
+        return visitor.items

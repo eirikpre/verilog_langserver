@@ -20,7 +20,7 @@ class AntlrCompile(distutils.cmd.Command):
         pass
 
     def run(self):
-        path = Path(os.getcwd()) / 'verilog-langserver' / 'verilog-parser' / 'grammar'
+        path = Path(os.getcwd()) / 'verilog_langserver' / 'verilog_parser' / 'grammar'
         classpath = '.;antlr-4.8-complete.jar'
         command = [
             'java',
@@ -28,7 +28,7 @@ class AntlrCompile(distutils.cmd.Command):
             'org.antlr.v4.Tool',
             '-Dlanguage=Python3',
             '-visitor',
-            'VerilogLexer.g4', 'VerilogParser.g4'
+            'SystemVerilog.g4'
             ]
         subprocess.call(
             command,
