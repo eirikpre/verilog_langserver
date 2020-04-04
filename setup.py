@@ -20,17 +20,16 @@ class AntlrCompile(distutils.cmd.Command):
         pass
 
     def run(self):
-        path = Path(os.getcwd()) / 'server' / 'parser' / 'grammar'
+        path = Path(os.getcwd()) / 'verilog-langserver' / 'verilog-parser' / 'grammar'
         classpath = '.;antlr-4.8-complete.jar'
         command = [
             'java',
             '-cp', classpath,
             'org.antlr.v4.Tool',
             '-Dlanguage=Python3',
-            'VerilogParser.g4',
+            'VerilogLexer.g4', 'VerilogFastParse.g4', 'VerilogFullParse.g4'
             ]
-
-        subprocess.check_call(
+        subprocess.call(
             command,
             cwd=str(path),
         )
@@ -44,10 +43,13 @@ setuptools.setup(
     description='Language server for Verilog/SystemVerilog',
     long_description=long_description,
     url='https://github.com/eirikpre/verilog-langserver',
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(
+        exclude=['test', 'docs']
+    ),
     python_requires='>=3.7',
     install_requires=[
-        'antlr4-python3-runtime'
+        'antlr4-python3-runtime',
+        'pygls'
     ],
     cmdclass={
         'antlr': AntlrCompile
