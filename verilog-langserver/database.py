@@ -1,12 +1,12 @@
+from .utils import Position
+
 
 class Database:
-
     def __init__(self):
-        # Defined macros and defines
-        self._macros = {}
-        # Declared objects
         self._files = {}
 
+    def update_file(self, filename, objects):
+        pass
 
     @property
     def declarations(self):
@@ -35,11 +35,7 @@ class Declaration:
         self.end = None
 
 
-class Macro(Declaration):
+class Defines(Declaration):
     pass
 
 
-class Position:
-    def __init__(self, line, char):
-        self.line = line
-        self.char = char

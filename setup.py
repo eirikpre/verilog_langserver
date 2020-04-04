@@ -27,7 +27,8 @@ class AntlrCompile(distutils.cmd.Command):
             '-cp', classpath,
             'org.antlr.v4.Tool',
             '-Dlanguage=Python3',
-            'VerilogLexer.g4', 'VerilogFastParse.g4', 'VerilogFullParse.g4'
+            '-visitor',
+            'VerilogLexer.g4', 'VerilogParser.g4'
             ]
         subprocess.call(
             command,

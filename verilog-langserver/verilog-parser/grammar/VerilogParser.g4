@@ -1,8 +1,5 @@
-parser grammar VerilogFastParse;
-/*
-    This is a simple grammar to describe global objects
-    for rough indexation
-*/
+parser grammar VerilogParser;
+
 options { tokenVocab=VerilogLexer; }
 
 source : declaration* EOF;
