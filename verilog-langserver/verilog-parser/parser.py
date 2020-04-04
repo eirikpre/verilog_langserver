@@ -2,8 +2,9 @@ import sys
 import antlr4
 
 from .grammar.VerilogLexer import VerilogLexer
-from .grammar.VerilogFullParse import VerilogFullParse
-from .grammar.VerilogFastParse import VerilogFastParse
+from .grammar.VerilogParser import VerilogParser
+from .grammar.VerilogParserListener import VerilogParserListener
+from .grammar.VerilogParserVisitor import VerilogParserVisitor
 
 class Parser:
 
@@ -14,8 +15,8 @@ class Parser:
         input_stream = antlr4.FileStream(filename)
         lexer = VerilogLexer(input_stream)
         stream = antlr4.CommonTokenStream(lexer)
-        parser = VerilogFullParse(stream)
-        tree = parser.source_text()
+        parser = VerilogParser(stream)
+        tree = parser.source()
 
         walker = antlr4.ParseTreeWalker()
 
