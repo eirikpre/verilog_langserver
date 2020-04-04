@@ -6,6 +6,7 @@ from .grammar.VerilogParser import VerilogParser
 from .grammar.VerilogParserListener import VerilogParserListener
 from .grammar.VerilogParserVisitor import VerilogParserVisitor
 
+
 class Parser:
 
     def __init__(self):
@@ -18,10 +19,14 @@ class Parser:
         parser = VerilogParser(stream)
         tree = parser.source()
 
-        walker = antlr4.ParseTreeWalker()
-
-
+        # walker = antlr4.ParseTreeWalker()
         return tree
 
     def parse_fast(self, filename):
         pass
+
+
+class File:
+    def __init__(self, filename):
+        self.filename = filename
+        self.items = {}
