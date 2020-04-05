@@ -12,12 +12,14 @@ class TestParser(unittest.TestCase):
         all_items = {}
 
         for fn in [
-                    # folder / 'class_example.sv',
-                    # folder / 'design.v',
-                    # folder / 'driver.sv',
+                    folder / 'class_example.sv',
+                    folder / 'design.v',
+                    folder / 'driver.sv',
                     folder / 'interface.sv' ]:
             items = parser.parse_fast(fn)
             all_items.update(items)
+
+
 
         print(all_items)
         return 1

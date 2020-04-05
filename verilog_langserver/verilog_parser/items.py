@@ -24,6 +24,11 @@ class Interface(Symbol):
         super().__init__(fname, ctx)
         self.kind = SymbolKind.Interface
 
+class Class(Symbol):
+    def __init__(self, fname, ctx: ParserRuleContext):
+        super().__init__(fname, ctx)
+        self.kind = SymbolKind.Class
+
 
 class Defines(Symbol):
     pass

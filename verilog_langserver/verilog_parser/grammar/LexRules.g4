@@ -12,7 +12,7 @@ NEWLINE: '\r'? '\n' -> skip;
 
 STRING: '"' (~["] | '\\"')* '"' ;
 
-// COMPILER_DIRECTIVE: GRAVE [a-zA-Z]+ .*? ~[\\]'\n' -> channel(PREPROCESS);
+COMPILER_DIRECTIVE: GRAVE WORD .*? ~[\\] EOL -> skip;
 
 
 COLON       : ':';
@@ -24,8 +24,10 @@ SQUARE_CLOSE: ']';
 CURLY_OPEN  : '{';
 CURLY_CLOSE : '}';
 COMMA       : ',';
-WORD        : CHAR+;
+WORD        : (CHAR | UNDERSCORE)+;
 
+
+OPERATORS: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$';
 
 // Numbers
 // C_IDENTIFIER : [a-zA-Z_] ( [a-zA-Z0-9_] )* ;
@@ -54,10 +56,11 @@ UNBASED_UNSIZED_LITERAL: APOSTROPHE (X | Z | [01]);
 
 
 // Fragments
-fragment GRAVE     : [´];
+fragment GRAVE     : [`];
 fragment APOSTROPHE: ['];
 fragment UNDERSCORE: [_];
 fragment DOT       : [.];
+fragment EOL       : '\n' '\r'?;
 
 
 fragment SIGN      : [+-];

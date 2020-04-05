@@ -10,7 +10,7 @@ class FastVisitor(Visitor):
 
     def visitModule_declaration(self, ctx:Parser.Module_declarationContext):
         obj = Module(self.fname, ctx)
-        self.items.update( { obj.name, obj } )
+        self.items.update( { obj.name : obj } )
         return None # Do not support recursive items
 
     def visitInterface_declaration(self, ctx:Parser.Interface_declarationContext):
@@ -31,10 +31,6 @@ class FastVisitor(Visitor):
     def visitFunction_declaration(self, ctx:Parser.Function_declarationContext):
         return self.visitChildren(ctx)
     def visitClass_declaration(self, ctx:Parser.Class_declarationContext):
+        obj = Interface(self.fname, ctx)
+        self.items.update( { obj.name : obj } )
         return self.visitChildren(ctx)
-
-
-
-
-
-    pass
