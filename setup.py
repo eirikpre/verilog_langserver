@@ -28,6 +28,7 @@ class AntlrCompile(distutils.cmd.Command):
             'org.antlr.v4.Tool',
             '-Dlanguage=Python3',
             '-visitor',
+            '-o', str(path.parent / 'antlr_build'),
             'SystemVerilog.g4'
             ]
         subprocess.call(

@@ -1,5 +1,5 @@
 from antlr4 import ParserRuleContext
-from .grammar.SystemVerilogParser import SystemVerilogParser as Parser
+from .antlr_build.SystemVerilogParser import SystemVerilogParser as Parser
 from pygls.types import Location, SymbolInformation, Range, Position, SymbolKind
 
 class Symbol(SymbolInformation):

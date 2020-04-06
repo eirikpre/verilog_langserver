@@ -44,6 +44,11 @@ class SystemVerilogVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SystemVerilogParser#class_declaration.
+    def visitClass_declaration(self, ctx:SystemVerilogParser.Class_declarationContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SystemVerilogParser#package_item.
     def visitPackage_item(self, ctx:SystemVerilogParser.Package_itemContext):
         return self.visitChildren(ctx)
@@ -56,11 +61,6 @@ class SystemVerilogVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SystemVerilogParser#function_declaration.
     def visitFunction_declaration(self, ctx:SystemVerilogParser.Function_declarationContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by SystemVerilogParser#class_declaration.
-    def visitClass_declaration(self, ctx:SystemVerilogParser.Class_declarationContext):
         return self.visitChildren(ctx)
 
 
@@ -79,13 +79,23 @@ class SystemVerilogVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SystemVerilogParser#identifier.
+    def visitIdentifier(self, ctx:SystemVerilogParser.IdentifierContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SystemVerilogParser#label.
     def visitLabel(self, ctx:SystemVerilogParser.LabelContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SystemVerilogParser#identifier.
-    def visitIdentifier(self, ctx:SystemVerilogParser.IdentifierContext):
+    # Visit a parse tree produced by SystemVerilogParser#hierarchical_identifier.
+    def visitHierarchical_identifier(self, ctx:SystemVerilogParser.Hierarchical_identifierContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SystemVerilogParser#constant_bit_select.
+    def visitConstant_bit_select(self, ctx:SystemVerilogParser.Constant_bit_selectContext):
         return self.visitChildren(ctx)
 
 

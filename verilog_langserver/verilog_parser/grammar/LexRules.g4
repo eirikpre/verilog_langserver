@@ -2,66 +2,63 @@ lexer grammar LexRules;
 
 // channels { ERROR, PREPROCESS }
 
-// Configuration
-SINGLELINE_COMMENT: '//' (~[\n])* '\n' -> skip;
-MULTILINE_COMMENT : '/*' .*? '*/'      -> skip;
+SINGLELINE_COMMENT: '//' (~[\n])* '\n'  -> skip;
+MULTILINE_COMMENT : '/*' .*? '*/'       -> skip;
+SPACE             : ' '                 -> skip;
+TAB               : '\t'                -> skip;
+NEWLINE           : '\r'? '\n'          -> skip;
 
-SPACE  : ' '        -> skip;
-TAB    : '\t'       -> skip;
-NEWLINE: '\r'? '\n' -> skip;
+String: '"' (~["] | '\\"')* '"' ;
 
-STRING: '"' (~["] | '\\"')* '"' ;
+COMPILER_DIRECTIVE: GRAVE Word .*? ~[\\] EOL -> skip;
 
-COMPILER_DIRECTIVE: GRAVE WORD .*? ~[\\] EOL -> skip;
+OpenBracket               : '[';
+CloseBracket              : ']';
+OpenParen                 : '(';
+CloseParen                : ')';
+OpenBrace                 : '{';
+CloseBrace                : '}';
+SemiColon                 : ';';
+Colon                     : ':';
+Comma                     : ',';
+Assign                    : '=';
+QuestionMark              : '?';
+Dot                       : '.';
 
+Operators: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$';
+// ====================
+//       Keywords
+// ====================
 
-COLON       : ':';
-SEMICOLON   : ';';
-PAR_OPEN    : '(';
-PAR_CLOSE   : ')';
-SQUARE_OPEN : '[';
-SQUARE_CLOSE: ']';
-CURLY_OPEN  : '{';
-CURLY_CLOSE : '}';
-COMMA       : ',';
-WORD        : (CHAR | UNDERSCORE)+;
-
-
-OPERATORS: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$';
-
-// Numbers
-// C_IDENTIFIER : [a-zA-Z_] ( [a-zA-Z0-9_] )* ;
-// SIMPLE_IDENTIFIER : [a-zA-Z_] ( [a-zA-Z0-9_$] )* ;
-// SYSTEM_TF_IDENTIFIER : '$' [a-zA-Z0-9_$] ( [a-zA-Z0-9_$] )* ;
 
 // ====================
 //       Numbers
 // ====================
-NUMBER         : INTEGRAL_NUMBER | REAL_NUMBER;
-INTEGRAL_NUMBER: DECIMAL_NUMBER | OCTAL_NUMBER | BINARY_NUMBER | HEX_NUMBER | UNSIGNED_NUMBER;
-REAL_NUMBER    : UNSIGNED_NUMBER DOT UNSIGNED_NUMBER | UNSIGNED_NUMBER DOT UNSIGNED_NUMBER [eE] SIGN UNSIGNED_NUMBER;
-DECIMAL_NUMBER : SIZE DECIMAL_BASE DECIMAL_DIGIT*;
-BINARY_NUMBER  : SIZE BINARY_BASE BINARY_VALUE;
-OCTAL_NUMBER   : SIZE OCTAL_BASE OCTAL_VALUE;
-HEX_NUMBER     : SIZE HEX_BASE HEX_VALUE;
-SIZE           : NON_ZERO_NUMBER;
-NON_ZERO_NUMBER: NON_ZERO_DIGIT  ( UNDERSCORE | DIGIT )*;
-UNSIGNED_NUMBER: DIGIT           ( UNDERSCORE | DIGIT )*;
-DECIMAL_VALUE  : DECIMAL_DIGIT   ( UNDERSCORE | DECIMAL_DIGIT )*;
-BINARY_VALUE   : BINARY_DIGIT    ( UNDERSCORE | BINARY_DIGIT  )*;
-OCTAL_VALUE    : OCTAL_DIGIT     ( UNDERSCORE | OCTAL_DIGIT   )*;
-HEX_VALUE      : HEX_DIGIT       ( UNDERSCORE | HEX_DIGIT     )*;
+Number         : IntegralNumber | RealNumber;
+IntegralNumber : DecimalNumber | OctalNumber | BinaryNumber | HexNumber | UnsignedNumber;
+RealNumber
+    : UnsignedNumber Dot UnsignedNumber
+    | UnsignedNumber Dot UnsignedNumber [eE] SIGN UnsignedNumber;
 
-UNBASED_UNSIZED_LITERAL: APOSTROPHE (X | Z | [01]);
+UnsignedNumber: DIGIT           ( UNDERSCORE | DIGIT )*;
 
+DecimalNumber: NON_ZERO_NUMBER? DECIMAL_BASE DECIMAL_VALUE;
+BinaryNumber : NON_ZERO_NUMBER? BINARY_BASE BINARY_VALUE;
+OctalNumber  : NON_ZERO_NUMBER? OCTAL_BASE OCTAL_VALUE;
+HexNumber    : NON_ZERO_NUMBER? HEX_BASE HEX_VALUE;
 
+UnbasedUnsizedLiteral: APOSTROPHE (X | Z | [01]);
+
+Time: UnsignedNumber TIME_UNIT;
+Word: (CHAR | UNDERSCORE)+;
+
+// ====================
 // Fragments
+// ====================
 fragment GRAVE     : [`];
 fragment APOSTROPHE: ['];
 fragment UNDERSCORE: [_];
-fragment DOT       : [.];
 fragment EOL       : '\n' '\r'?;
-
 
 fragment SIGN      : [+-];
 fragment TIME_UNIT : ([munpf])?[s];
@@ -76,8 +73,13 @@ fragment BINARY_DIGIT  : [01]        | X | Z;
 fragment OCTAL_DIGIT   : [0-7]       | X | Z;
 fragment HEX_DIGIT     : [0-9a-fA-F] | X | Z;
 
-fragment DECIMAL_BASE: APOSTROPHE [dD];
-fragment BINARY_BASE : APOSTROPHE [bB];
-fragment OCTAL_BASE  : APOSTROPHE [oO];
-fragment HEX_BASE    : APOSTROPHE [hH];
+fragment NON_ZERO_NUMBER: NON_ZERO_DIGIT  ( UNDERSCORE | DIGIT )*;
 
+fragment DECIMAL_BASE : APOSTROPHE [dD];
+fragment BINARY_BASE  : APOSTROPHE [bB];
+fragment OCTAL_BASE   : APOSTROPHE [oO];
+fragment HEX_BASE     : APOSTROPHE [hH];
+fragment DECIMAL_VALUE: DECIMAL_DIGIT   ( UNDERSCORE | DECIMAL_DIGIT )*;
+fragment BINARY_VALUE : BINARY_DIGIT    ( UNDERSCORE | BINARY_DIGIT  )*;
+fragment OCTAL_VALUE  : OCTAL_DIGIT     ( UNDERSCORE | OCTAL_DIGIT   )*;
+fragment HEX_VALUE    : HEX_DIGIT       ( UNDERSCORE | HEX_DIGIT     )*;

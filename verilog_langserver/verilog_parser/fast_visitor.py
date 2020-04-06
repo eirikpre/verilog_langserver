@@ -1,6 +1,6 @@
 from .items import *
-from .grammar.SystemVerilogParser import SystemVerilogParser as Parser
-from .grammar.SystemVerilogVisitor import SystemVerilogVisitor as Visitor
+from .antlr_build.SystemVerilogParser import SystemVerilogParser as Parser
+from .antlr_build.SystemVerilogVisitor import SystemVerilogVisitor as Visitor
 
 class FastVisitor(Visitor):
 
@@ -30,7 +30,8 @@ class FastVisitor(Visitor):
         return self.visitChildren(ctx)
     def visitFunction_declaration(self, ctx:Parser.Function_declarationContext):
         return self.visitChildren(ctx)
+
     def visitClass_declaration(self, ctx:Parser.Class_declarationContext):
-        obj = Interface(self.fname, ctx)
+        obj = Class(self.fname, ctx)
         self.items.update( { obj.name : obj } )
         return self.visitChildren(ctx)

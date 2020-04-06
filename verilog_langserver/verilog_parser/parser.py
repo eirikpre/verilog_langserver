@@ -1,12 +1,18 @@
 import sys
 import antlr4
 
-from .grammar.SystemVerilogLexer import SystemVerilogLexer
-from .grammar.SystemVerilogParser import SystemVerilogParser
-from .grammar.SystemVerilogListener import SystemVerilogListener
-from .grammar.SystemVerilogVisitor import SystemVerilogVisitor
+from .antlr_build.SystemVerilogLexer import SystemVerilogLexer
+from .antlr_build.SystemVerilogParser import SystemVerilogParser
+from .antlr_build.SystemVerilogListener import SystemVerilogListener
+from .antlr_build.SystemVerilogVisitor import SystemVerilogVisitor
 
 from .fast_visitor import FastVisitor
+
+# =================================
+# The parser splits
+
+
+# =================================
 
 
 class Parser:

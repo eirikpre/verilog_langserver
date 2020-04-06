@@ -34,7 +34,7 @@ parameter_port_list : '#(' .*? ')';
 port_list:  '(' .*? ')' ;
 return_val: 'void' | .*? ;
 
-label: COLON identifier;
-identifier: WORD;
-hierarchical_identifier : ( '$root' '.' )? ( identifier constant_bit_select '.' )* identifier ;
-constant_bit_select : ( '[' WORD ']' )* ;
+identifier: Word;
+label: Colon identifier;
+hierarchical_identifier : ( '$root' '.' )? ( Word constant_bit_select '.' )* identifier ;
+constant_bit_select : ( '[' Word ']' )* ;
