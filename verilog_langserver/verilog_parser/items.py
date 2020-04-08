@@ -4,10 +4,7 @@ from pygls.types import Location, SymbolInformation, Range, Position, SymbolKind
 
 class Symbol(SymbolInformation):
     def __init__(self, filename, ctx: ParserRuleContext):
-        try:
-            self.name = ctx.getChild(0, Parser.IdentifierContext).start.text
-        except:
-            pass
+        self.name = ctx.getChild(0, Parser.IdentifierContext).start.text
         self.kind = None
         self.containerName = None
         self.location = Location(filename,

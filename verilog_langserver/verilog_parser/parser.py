@@ -33,5 +33,7 @@ class Parser:
 
         visitor = FastVisitor(fname)
         result = visitor.visit(tree)
+        if result is not None:
+            raise 'Something is up'
 
         return visitor.items
