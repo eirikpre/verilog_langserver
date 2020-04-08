@@ -11,7 +11,7 @@ declaration:
     | package_declaration
     | package_item
     | config_declaration
-    | .+?
+    // | .+? This is a bad idea due to performance!
     ;
     //  | udp_declaration
     //  | ( attribute_instance )* bind_directive
