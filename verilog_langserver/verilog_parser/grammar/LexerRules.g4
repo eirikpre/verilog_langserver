@@ -1,4 +1,4 @@
-lexer grammar LexRules;
+lexer grammar LexerRules;
 
 // channels { ERROR, PREPROCESS }
 
@@ -10,7 +10,7 @@ NEWLINE           : '\r'? '\n'          -> skip;
 
 String: '"' (~["] | '\\"')* '"' ;
 
-COMPILER_DIRECTIVE: GRAVE Word .*? ~[\\] EOL -> skip;
+COMPILER_DIRECTIVE: GRAVE Word .*? EOL -> skip;
 
 OpenBracket               : '[';
 CloseBracket              : ']';
@@ -25,7 +25,7 @@ Assign                    : '=';
 QuestionMark              : '?';
 Dot                       : '.';
 
-Operators: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$';
+Operators: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$'|'#';
 // ====================
 //       Keywords
 // ====================

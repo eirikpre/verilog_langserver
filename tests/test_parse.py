@@ -1,3 +1,4 @@
+import os
 import unittest
 import pathlib
 
@@ -9,19 +10,13 @@ class TestParser(unittest.TestCase):
         parser = Parser()
 
         folder = pathlib.Path(__file__).parent / 'verilog'
-        all_items = {}
 
-        for fn in [
-                    folder / 'class_example.sv',
-                    folder / 'design.v',
-                    folder / 'driver.sv',
-                    folder / 'interface.sv' ]:
+        for fn in [f.path for f in os.scandir(folder) if not f.is_dir()]:
+            print(fn)
             items = parser.parse_fast(fn)
-            all_items.update(items)
+            for i in items:
+                print('\t' + i.name)
 
-
-
-        print(all_items)
         return 1
 
 if __name__ == '__main__':

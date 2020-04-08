@@ -20,21 +20,16 @@ class AntlrCompile(distutils.cmd.Command):
         pass
 
     def run(self):
-        path = Path(os.getcwd()) / 'verilog_langserver' / 'verilog_parser' / 'grammar'
-        classpath = '.;antlr-4.8-complete.jar'
-        command = [
-            'java',
-            '-cp', classpath,
-            'org.antlr.v4.Tool',
-            '-Dlanguage=Python3',
-            '-visitor',
-            '-o', str(path.parent / 'antlr_build'),
-            'SystemVerilog.g4'
-            ]
-        subprocess.call(
-            command,
-            cwd=str(path),
-        )
+        base_path = str(Path(os.getcwd()) / 'verilog_langserver' / 'verilog_parser')
+        base_cmd = 'java -cp antlr-4.8-complete.jar org.antlr.v4.Tool -Dlanguage=Python3 '
+
+        diagnosis_cmd = base_cmd + f'-o  {base_path}/antlr_build/diagnosis {base_path}/grammar/diagnosis/SystemVerilog.g4'
+        symbol_cmd = base_cmd + f'-visitor -o {base_path}/antlr_build {base_path}/grammar/SystemVerilogSymbol.g4'
+
+        for cmd in [diagnosis_cmd, symbol_cmd]:
+            subprocess.check_call(
+                cmd.split()
+            )
 
 
 setuptools.setup(
@@ -42,7 +37,7 @@ setuptools.setup(
     version='0.1',
     author='Eirik Prestegårdshus',
     author_email='eirikpre@gmail.com',
-    description='Language server for Verilog/SystemVerilog',
+    description='Language Server for Verilog/SystemVerilog',
     long_description=long_description,
     url='https://github.com/eirikpre/verilog-langserver',
     packages=setuptools.find_packages(

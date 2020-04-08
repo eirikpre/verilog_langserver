@@ -1,5 +1,5 @@
 from antlr4 import ParserRuleContext
-from .antlr_build.SystemVerilogParser import SystemVerilogParser as Parser
+from .antlr_build.SystemVerilogSymbolParser import SystemVerilogSymbolParser as Parser
 from pygls.types import Location, SymbolInformation, Range, Position, SymbolKind
 
 class Symbol(SymbolInformation):
@@ -29,6 +29,15 @@ class Class(Symbol):
         super().__init__(fname, ctx)
         self.kind = SymbolKind.Class
 
+class Package(Symbol):
+    def __init__(self, fname, ctx: ParserRuleContext):
+        super().__init__(fname, ctx)
+        self.kind = SymbolKind.Package
+
+class TaskOrFunction(Symbol):
+    def __init__(self, fname, ctx: ParserRuleContext):
+        super().__init__(fname, ctx)
+        self.kind = SymbolKind.Function
 
 class Defines(Symbol):
     pass

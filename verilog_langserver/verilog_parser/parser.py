@@ -1,10 +1,10 @@
 import sys
 import antlr4
 
-from .antlr_build.SystemVerilogLexer import SystemVerilogLexer
-from .antlr_build.SystemVerilogParser import SystemVerilogParser
-from .antlr_build.SystemVerilogListener import SystemVerilogListener
-from .antlr_build.SystemVerilogVisitor import SystemVerilogVisitor
+from .antlr_build.SystemVerilogSymbolLexer import SystemVerilogSymbolLexer as WorkspaceSymbolLexer
+from .antlr_build.SystemVerilogSymbolParser import SystemVerilogSymbolParser as WorkspaceSymbolParser
+# from .antlr_build.SystemVerilogSymbolListener import SystemVerilogSymbolListener as
+# from .antlr_build.SystemVerilogSymbolVisitor import SystemVerilogSymbolVisitor
 
 from .fast_visitor import FastVisitor
 
@@ -22,19 +22,19 @@ class Parser:
 
     def parse_full(self, filename):
         input_stream = antlr4.FileStream(filename)
-        lexer = SystemVerilogLexer(input_stream)
+        lexer = WorkspaceSymbolLexer(input_stream)
         stream = antlr4.CommonTokenStream(lexer)
-        parser = SystemVerilogParser(stream)
+        parser = WorkspaceSymbolParser(stream)
         tree = parser.source()
 
         # walker = antlr4.ParseTreeWalker()
         return tree
 
-    def parse_fast(self, fname):
+    def parse_fast(self, fname: str):
         input_stream = antlr4.FileStream(fname)
-        lexer = SystemVerilogLexer(input_stream)
+        lexer = WorkspaceSymbolLexer(input_stream)
         stream = antlr4.CommonTokenStream(lexer)
-        parser = SystemVerilogParser(stream)
+        parser = WorkspaceSymbolParser(stream)
         tree = parser.source()
 
         visitor = FastVisitor(fname)

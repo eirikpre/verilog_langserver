@@ -1,19 +1,17 @@
-from .utils import Position
-
 
 class Database:
     def __init__(self):
         self._files = {}
 
-    def update_file(self, filename, objects):
-        pass
+    def update_file(self, filename, items):
+        self._files.update({filename : items})
 
     @property
     def declarations(self):
         declarations = {}
         for f in self._files:
-            for o in f.declarations:
-                declarations.update(o)
+            for dec in f.declarations:
+                declarations.update(dec)
         return declarations
 
     @property
