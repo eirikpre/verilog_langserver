@@ -11,6 +11,7 @@ declaration:
     | package_declaration
     | package_item
     | config_declaration
+    | .+?
     ;
     //  | udp_declaration
     //  | ( attribute_instance )* bind_directive
