@@ -1,18 +1,12 @@
 import sys
 import antlr4
 
-from .antlr_build.SystemVerilogSymbolLexer import SystemVerilogSymbolLexer as WorkspaceSymbolLexer
-from .antlr_build.SystemVerilogSymbolParser import SystemVerilogSymbolParser as WorkspaceSymbolParser
-# from .antlr_build.SystemVerilogSymbolListener import SystemVerilogSymbolListener as
-# from .antlr_build.SystemVerilogSymbolVisitor import SystemVerilogSymbolVisitor
+# from .antlr_build.diagnosis.SystemVerilogLexer import SystemVerilogLexer as DiagnosisLexer
+# from .antlr_build.diagnosis.SystemVerilogParser import SystemVerilogParser as DiagnosisParser
 
+from .antlr_build.WorkspaceSymbolLexer import WorkspaceSymbolLexer
+from .antlr_build.WorkspaceSymbolParser import WorkspaceSymbolParser
 from .fast_visitor import FastVisitor
-
-# =================================
-# The parser splits
-
-
-# =================================
 
 
 class Parser:

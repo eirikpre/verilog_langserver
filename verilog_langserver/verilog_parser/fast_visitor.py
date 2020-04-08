@@ -1,6 +1,6 @@
 from .items import *
-from .antlr_build.SystemVerilogSymbolParser import SystemVerilogSymbolParser as Parser
-from .antlr_build.SystemVerilogSymbolVisitor import SystemVerilogSymbolVisitor as Visitor
+from .antlr_build.WorkspaceSymbolParser import WorkspaceSymbolParser as Parser
+from .antlr_build.WorkspaceSymbolVisitor import WorkspaceSymbolVisitor as Visitor
 
 class FastVisitor(Visitor):
 

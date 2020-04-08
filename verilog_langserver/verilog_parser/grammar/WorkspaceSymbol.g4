@@ -1,4 +1,4 @@
-grammar SystemVerilogSymbol;
+grammar WorkspaceSymbol;
 
 import LexerRules;
 

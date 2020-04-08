@@ -1,4 +1,4 @@
-# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/SystemVerilogSymbol.g4 by ANTLR 4.8
+# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/WorkspaceSymbol.g4 by ANTLR 4.8
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
@@ -285,7 +285,7 @@ def serializedATN():
         return buf.getvalue()
 
 
-class SystemVerilogSymbolLexer(Lexer):
+class WorkspaceSymbolLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -385,7 +385,7 @@ class SystemVerilogSymbolLexer(Lexer):
                   "HEX_BASE", "DECIMAL_VALUE", "BINARY_VALUE", "OCTAL_VALUE", 
                   "HEX_VALUE" ]
 
-    grammarFileName = "SystemVerilogSymbol.g4"
+    grammarFileName = "WorkspaceSymbol.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)

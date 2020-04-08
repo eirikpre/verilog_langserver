@@ -24,7 +24,7 @@ class AntlrCompile(distutils.cmd.Command):
         base_cmd = 'java -cp antlr-4.8-complete.jar org.antlr.v4.Tool -Dlanguage=Python3 '
 
         diagnosis_cmd = base_cmd + f'-o  {base_path}/antlr_build/diagnosis {base_path}/grammar/diagnosis/SystemVerilog.g4'
-        symbol_cmd = base_cmd + f'-visitor -o {base_path}/antlr_build {base_path}/grammar/SystemVerilogSymbol.g4'
+        symbol_cmd = base_cmd + f'-visitor -o {base_path}/antlr_build {base_path}/grammar/WorkspaceSymbol.g4'
 
         for cmd in [diagnosis_cmd, symbol_cmd]:
             subprocess.check_call(

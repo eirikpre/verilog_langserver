@@ -1,10 +1,13 @@
 from antlr4 import ParserRuleContext
-from .antlr_build.SystemVerilogSymbolParser import SystemVerilogSymbolParser as Parser
+from .antlr_build.WorkspaceSymbolParser import WorkspaceSymbolParser as Parser
 from pygls.types import Location, SymbolInformation, Range, Position, SymbolKind
 
 class Symbol(SymbolInformation):
     def __init__(self, filename, ctx: ParserRuleContext):
-        self.name = ctx.getChild(0, Parser.IdentifierContext).start.text
+        try:
+            self.name = ctx.getChild(0, Parser.IdentifierContext).start.text
+        except:
+            pass
         self.kind = None
         self.containerName = None
         self.location = Location(filename,

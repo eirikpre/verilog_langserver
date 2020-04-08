@@ -1,4 +1,4 @@
-# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/SystemVerilogSymbol.g4 by ANTLR 4.8
+# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/WorkspaceSymbol.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -110,9 +110,9 @@ def serializedATN():
         return buf.getvalue()
 
 
-class SystemVerilogSymbolParser ( Parser ):
+class WorkspaceSymbolParser ( Parser ):
 
-    grammarFileName = "SystemVerilogSymbol.g4"
+    grammarFileName = "WorkspaceSymbol.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -245,17 +245,17 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(SystemVerilogSymbolParser.EOF, 0)
+            return self.getToken(WorkspaceSymbolParser.EOF, 0)
 
         def declaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SystemVerilogSymbolParser.DeclarationContext)
+                return self.getTypedRuleContexts(WorkspaceSymbolParser.DeclarationContext)
             else:
-                return self.getTypedRuleContext(SystemVerilogSymbolParser.DeclarationContext,i)
+                return self.getTypedRuleContext(WorkspaceSymbolParser.DeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_source
+            return WorkspaceSymbolParser.RULE_source
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterSource" ):
@@ -276,7 +276,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def source(self):
 
-        localctx = SystemVerilogSymbolParser.SourceContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.SourceContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_source)
         self._la = 0 # Token type
         try:
@@ -284,7 +284,7 @@ class SystemVerilogSymbolParser ( Parser ):
             self.state = 43
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SystemVerilogSymbolParser.T__0) | (1 << SystemVerilogSymbolParser.T__2) | (1 << SystemVerilogSymbolParser.T__4) | (1 << SystemVerilogSymbolParser.T__6) | (1 << SystemVerilogSymbolParser.T__8) | (1 << SystemVerilogSymbolParser.T__10) | (1 << SystemVerilogSymbolParser.T__11) | (1 << SystemVerilogSymbolParser.T__13) | (1 << SystemVerilogSymbolParser.T__15) | (1 << SystemVerilogSymbolParser.T__17))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << WorkspaceSymbolParser.T__0) | (1 << WorkspaceSymbolParser.T__2) | (1 << WorkspaceSymbolParser.T__4) | (1 << WorkspaceSymbolParser.T__6) | (1 << WorkspaceSymbolParser.T__8) | (1 << WorkspaceSymbolParser.T__10) | (1 << WorkspaceSymbolParser.T__11) | (1 << WorkspaceSymbolParser.T__13) | (1 << WorkspaceSymbolParser.T__15) | (1 << WorkspaceSymbolParser.T__17))) != 0):
                 self.state = 40
                 self.declaration()
                 self.state = 45
@@ -292,7 +292,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 46
-            self.match(SystemVerilogSymbolParser.EOF)
+            self.match(WorkspaceSymbolParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -309,31 +309,31 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def module_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Module_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Module_declarationContext,0)
 
 
         def interface_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Interface_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Interface_declarationContext,0)
 
 
         def program_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Program_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Program_declarationContext,0)
 
 
         def package_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Package_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_declarationContext,0)
 
 
         def package_item(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Package_itemContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_itemContext,0)
 
 
         def config_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Config_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Config_declarationContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_declaration
+            return WorkspaceSymbolParser.RULE_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterDeclaration" ):
@@ -354,38 +354,38 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def declaration(self):
 
-        localctx = SystemVerilogSymbolParser.DeclarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.DeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_declaration)
         try:
             self.state = 54
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SystemVerilogSymbolParser.T__0]:
+            if token in [WorkspaceSymbolParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 48
                 self.module_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__2]:
+            elif token in [WorkspaceSymbolParser.T__2]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 49
                 self.interface_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__4]:
+            elif token in [WorkspaceSymbolParser.T__4]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 50
                 self.program_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__6]:
+            elif token in [WorkspaceSymbolParser.T__6]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 51
                 self.package_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__10, SystemVerilogSymbolParser.T__11, SystemVerilogSymbolParser.T__13, SystemVerilogSymbolParser.T__15, SystemVerilogSymbolParser.T__17]:
+            elif token in [WorkspaceSymbolParser.T__10, WorkspaceSymbolParser.T__11, WorkspaceSymbolParser.T__13, WorkspaceSymbolParser.T__15, WorkspaceSymbolParser.T__17]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 52
                 self.package_item()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__8]:
+            elif token in [WorkspaceSymbolParser.T__8]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 53
                 self.config_declaration()
@@ -409,15 +409,15 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def parameter_port_list(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Parameter_port_listContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Parameter_port_listContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_module_declaration
+            return WorkspaceSymbolParser.RULE_module_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterModule_declaration" ):
@@ -438,12 +438,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def module_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Module_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Module_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_module_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 56
-            self.match(SystemVerilogSymbolParser.T__0)
+            self.match(WorkspaceSymbolParser.T__0)
             self.state = 57
             self.identifier()
             self.state = 59
@@ -466,7 +466,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
 
             self.state = 67
-            self.match(SystemVerilogSymbolParser.T__1)
+            self.match(WorkspaceSymbolParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -483,15 +483,15 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def parameter_port_list(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Parameter_port_listContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Parameter_port_listContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_interface_declaration
+            return WorkspaceSymbolParser.RULE_interface_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterInterface_declaration" ):
@@ -512,12 +512,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def interface_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Interface_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Interface_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_interface_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 69
-            self.match(SystemVerilogSymbolParser.T__2)
+            self.match(WorkspaceSymbolParser.T__2)
             self.state = 70
             self.identifier()
             self.state = 72
@@ -540,7 +540,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
 
             self.state = 80
-            self.match(SystemVerilogSymbolParser.T__3)
+            self.match(WorkspaceSymbolParser.T__3)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -557,15 +557,15 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def life_time(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Life_timeContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Life_timeContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_program_declaration
+            return WorkspaceSymbolParser.RULE_program_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterProgram_declaration" ):
@@ -586,17 +586,17 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def program_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Program_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Program_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_program_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 82
-            self.match(SystemVerilogSymbolParser.T__4)
+            self.match(WorkspaceSymbolParser.T__4)
             self.state = 84
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SystemVerilogSymbolParser.T__20 or _la==SystemVerilogSymbolParser.T__21:
+            if _la==WorkspaceSymbolParser.T__20 or _la==WorkspaceSymbolParser.T__21:
                 self.state = 83
                 self.life_time()
 
@@ -615,7 +615,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
 
             self.state = 93
-            self.match(SystemVerilogSymbolParser.T__5)
+            self.match(WorkspaceSymbolParser.T__5)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -632,11 +632,11 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def package_item(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Package_itemContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_itemContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_package_declaration
+            return WorkspaceSymbolParser.RULE_package_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPackage_declaration" ):
@@ -657,12 +657,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def package_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Package_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Package_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_package_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 95
-            self.match(SystemVerilogSymbolParser.T__6)
+            self.match(WorkspaceSymbolParser.T__6)
             self.state = 103
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
@@ -687,7 +687,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
 
             self.state = 105
-            self.match(SystemVerilogSymbolParser.T__7)
+            self.match(WorkspaceSymbolParser.T__7)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -705,7 +705,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_config_declaration
+            return WorkspaceSymbolParser.RULE_config_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConfig_declaration" ):
@@ -726,12 +726,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def config_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Config_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Config_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_config_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 107
-            self.match(SystemVerilogSymbolParser.T__8)
+            self.match(WorkspaceSymbolParser.T__8)
             self.state = 111
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,10,self._ctx)
@@ -744,7 +744,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,10,self._ctx)
 
             self.state = 114
-            self.match(SystemVerilogSymbolParser.T__9)
+            self.match(WorkspaceSymbolParser.T__9)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -761,19 +761,19 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def life_time(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Life_timeContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Life_timeContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_class_declaration
+            return WorkspaceSymbolParser.RULE_class_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterClass_declaration" ):
@@ -794,7 +794,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def class_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Class_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Class_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_class_declaration)
         self._la = 0 # Token type
         try:
@@ -802,17 +802,17 @@ class SystemVerilogSymbolParser ( Parser ):
             self.state = 117
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SystemVerilogSymbolParser.T__10:
+            if _la==WorkspaceSymbolParser.T__10:
                 self.state = 116
-                self.match(SystemVerilogSymbolParser.T__10)
+                self.match(WorkspaceSymbolParser.T__10)
 
 
             self.state = 119
-            self.match(SystemVerilogSymbolParser.T__11)
+            self.match(WorkspaceSymbolParser.T__11)
             self.state = 121
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SystemVerilogSymbolParser.T__20 or _la==SystemVerilogSymbolParser.T__21:
+            if _la==WorkspaceSymbolParser.T__20 or _la==WorkspaceSymbolParser.T__21:
                 self.state = 120
                 self.life_time()
 
@@ -831,11 +831,11 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
 
             self.state = 130
-            self.match(SystemVerilogSymbolParser.T__12)
+            self.match(WorkspaceSymbolParser.T__12)
             self.state = 132
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SystemVerilogSymbolParser.Colon:
+            if _la==WorkspaceSymbolParser.Colon:
                 self.state = 131
                 self.label()
 
@@ -856,23 +856,23 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def task_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Task_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Task_declarationContext,0)
 
 
         def function_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Function_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Function_declarationContext,0)
 
 
         def class_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Class_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Class_declarationContext,0)
 
 
         def type_declaration(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Type_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Type_declarationContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_package_item
+            return WorkspaceSymbolParser.RULE_package_item
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPackage_item" ):
@@ -893,28 +893,28 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def package_item(self):
 
-        localctx = SystemVerilogSymbolParser.Package_itemContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Package_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_package_item)
         try:
             self.state = 138
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SystemVerilogSymbolParser.T__13]:
+            if token in [WorkspaceSymbolParser.T__13]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 134
                 self.task_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__15]:
+            elif token in [WorkspaceSymbolParser.T__15]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 135
                 self.function_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__10, SystemVerilogSymbolParser.T__11]:
+            elif token in [WorkspaceSymbolParser.T__10, WorkspaceSymbolParser.T__11]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 136
                 self.class_declaration()
                 pass
-            elif token in [SystemVerilogSymbolParser.T__17]:
+            elif token in [WorkspaceSymbolParser.T__17]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 137
                 self.type_declaration()
@@ -938,11 +938,11 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_task_declaration
+            return WorkspaceSymbolParser.RULE_task_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterTask_declaration" ):
@@ -963,12 +963,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def task_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Task_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Task_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_task_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 140
-            self.match(SystemVerilogSymbolParser.T__13)
+            self.match(WorkspaceSymbolParser.T__13)
             self.state = 141
             self.identifier()
             self.state = 145
@@ -983,7 +983,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
 
             self.state = 148
-            self.match(SystemVerilogSymbolParser.T__14)
+            self.match(WorkspaceSymbolParser.T__14)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1000,18 +1000,18 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def return_val(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.Return_valContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.Return_valContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def OpenParen(self):
-            return self.getToken(SystemVerilogSymbolParser.OpenParen, 0)
+            return self.getToken(WorkspaceSymbolParser.OpenParen, 0)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_function_declaration
+            return WorkspaceSymbolParser.RULE_function_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterFunction_declaration" ):
@@ -1032,18 +1032,18 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def function_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Function_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Function_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_function_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 150
-            self.match(SystemVerilogSymbolParser.T__15)
+            self.match(WorkspaceSymbolParser.T__15)
             self.state = 151
             self.return_val()
             self.state = 152
             self.identifier()
             self.state = 153
-            self.match(SystemVerilogSymbolParser.OpenParen)
+            self.match(WorkspaceSymbolParser.OpenParen)
             self.state = 157
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
@@ -1056,7 +1056,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
 
             self.state = 160
-            self.match(SystemVerilogSymbolParser.T__16)
+            self.match(WorkspaceSymbolParser.T__16)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1073,14 +1073,14 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def SemiColon(self):
-            return self.getToken(SystemVerilogSymbolParser.SemiColon, 0)
+            return self.getToken(WorkspaceSymbolParser.SemiColon, 0)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_type_declaration
+            return WorkspaceSymbolParser.RULE_type_declaration
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterType_declaration" ):
@@ -1101,12 +1101,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def type_declaration(self):
 
-        localctx = SystemVerilogSymbolParser.Type_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Type_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_type_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 162
-            self.match(SystemVerilogSymbolParser.T__17)
+            self.match(WorkspaceSymbolParser.T__17)
             self.state = 166
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
@@ -1121,7 +1121,7 @@ class SystemVerilogSymbolParser ( Parser ):
             self.state = 169
             self.identifier()
             self.state = 170
-            self.match(SystemVerilogSymbolParser.SemiColon)
+            self.match(WorkspaceSymbolParser.SemiColon)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1138,10 +1138,10 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def CloseParen(self):
-            return self.getToken(SystemVerilogSymbolParser.CloseParen, 0)
+            return self.getToken(WorkspaceSymbolParser.CloseParen, 0)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_parameter_port_list
+            return WorkspaceSymbolParser.RULE_parameter_port_list
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterParameter_port_list" ):
@@ -1162,12 +1162,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def parameter_port_list(self):
 
-        localctx = SystemVerilogSymbolParser.Parameter_port_listContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Parameter_port_listContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_parameter_port_list)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 172
-            self.match(SystemVerilogSymbolParser.T__18)
+            self.match(WorkspaceSymbolParser.T__18)
             self.state = 176
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,19,self._ctx)
@@ -1180,7 +1180,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,19,self._ctx)
 
             self.state = 179
-            self.match(SystemVerilogSymbolParser.CloseParen)
+            self.match(WorkspaceSymbolParser.CloseParen)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1197,13 +1197,13 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def OpenParen(self):
-            return self.getToken(SystemVerilogSymbolParser.OpenParen, 0)
+            return self.getToken(WorkspaceSymbolParser.OpenParen, 0)
 
         def CloseParen(self):
-            return self.getToken(SystemVerilogSymbolParser.CloseParen, 0)
+            return self.getToken(WorkspaceSymbolParser.CloseParen, 0)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_port_list
+            return WorkspaceSymbolParser.RULE_port_list
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPort_list" ):
@@ -1224,12 +1224,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def port_list(self):
 
-        localctx = SystemVerilogSymbolParser.Port_listContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Port_listContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_port_list)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 181
-            self.match(SystemVerilogSymbolParser.OpenParen)
+            self.match(WorkspaceSymbolParser.OpenParen)
             self.state = 185
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
@@ -1242,7 +1242,7 @@ class SystemVerilogSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
 
             self.state = 188
-            self.match(SystemVerilogSymbolParser.CloseParen)
+            self.match(WorkspaceSymbolParser.CloseParen)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1260,7 +1260,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_return_val
+            return WorkspaceSymbolParser.RULE_return_val
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterReturn_val" ):
@@ -1281,7 +1281,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def return_val(self):
 
-        localctx = SystemVerilogSymbolParser.Return_valContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Return_valContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_return_val)
         try:
             self.state = 197
@@ -1290,7 +1290,7 @@ class SystemVerilogSymbolParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 190
-                self.match(SystemVerilogSymbolParser.T__19)
+                self.match(WorkspaceSymbolParser.T__19)
                 pass
 
             elif la_ == 2:
@@ -1326,7 +1326,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_life_time
+            return WorkspaceSymbolParser.RULE_life_time
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLife_time" ):
@@ -1347,14 +1347,14 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def life_time(self):
 
-        localctx = SystemVerilogSymbolParser.Life_timeContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Life_timeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_life_time)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 199
             _la = self._input.LA(1)
-            if not(_la==SystemVerilogSymbolParser.T__20 or _la==SystemVerilogSymbolParser.T__21):
+            if not(_la==WorkspaceSymbolParser.T__20 or _la==WorkspaceSymbolParser.T__21):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1375,10 +1375,10 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def Word(self):
-            return self.getToken(SystemVerilogSymbolParser.Word, 0)
+            return self.getToken(WorkspaceSymbolParser.Word, 0)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_identifier
+            return WorkspaceSymbolParser.RULE_identifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterIdentifier" ):
@@ -1399,12 +1399,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def identifier(self):
 
-        localctx = SystemVerilogSymbolParser.IdentifierContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.IdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_identifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 201
-            self.match(SystemVerilogSymbolParser.Word)
+            self.match(WorkspaceSymbolParser.Word)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1421,14 +1421,14 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def Colon(self):
-            return self.getToken(SystemVerilogSymbolParser.Colon, 0)
+            return self.getToken(WorkspaceSymbolParser.Colon, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_label
+            return WorkspaceSymbolParser.RULE_label
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterLabel" ):
@@ -1449,12 +1449,12 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def label(self):
 
-        localctx = SystemVerilogSymbolParser.LabelContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.LabelContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_label)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 203
-            self.match(SystemVerilogSymbolParser.Colon)
+            self.match(WorkspaceSymbolParser.Colon)
             self.state = 204
             self.identifier()
         except RecognitionException as re:
@@ -1473,30 +1473,30 @@ class SystemVerilogSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SystemVerilogSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
 
 
         def Dot(self, i:int=None):
             if i is None:
-                return self.getTokens(SystemVerilogSymbolParser.Dot)
+                return self.getTokens(WorkspaceSymbolParser.Dot)
             else:
-                return self.getToken(SystemVerilogSymbolParser.Dot, i)
+                return self.getToken(WorkspaceSymbolParser.Dot, i)
 
         def Word(self, i:int=None):
             if i is None:
-                return self.getTokens(SystemVerilogSymbolParser.Word)
+                return self.getTokens(WorkspaceSymbolParser.Word)
             else:
-                return self.getToken(SystemVerilogSymbolParser.Word, i)
+                return self.getToken(WorkspaceSymbolParser.Word, i)
 
         def constant_bit_select(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(SystemVerilogSymbolParser.Constant_bit_selectContext)
+                return self.getTypedRuleContexts(WorkspaceSymbolParser.Constant_bit_selectContext)
             else:
-                return self.getTypedRuleContext(SystemVerilogSymbolParser.Constant_bit_selectContext,i)
+                return self.getTypedRuleContext(WorkspaceSymbolParser.Constant_bit_selectContext,i)
 
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_hierarchical_identifier
+            return WorkspaceSymbolParser.RULE_hierarchical_identifier
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterHierarchical_identifier" ):
@@ -1517,7 +1517,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def hierarchical_identifier(self):
 
-        localctx = SystemVerilogSymbolParser.Hierarchical_identifierContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Hierarchical_identifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_hierarchical_identifier)
         self._la = 0 # Token type
         try:
@@ -1525,11 +1525,11 @@ class SystemVerilogSymbolParser ( Parser ):
             self.state = 208
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SystemVerilogSymbolParser.T__22:
+            if _la==WorkspaceSymbolParser.T__22:
                 self.state = 206
-                self.match(SystemVerilogSymbolParser.T__22)
+                self.match(WorkspaceSymbolParser.T__22)
                 self.state = 207
-                self.match(SystemVerilogSymbolParser.Dot)
+                self.match(WorkspaceSymbolParser.Dot)
 
 
             self.state = 216
@@ -1538,11 +1538,11 @@ class SystemVerilogSymbolParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 210
-                    self.match(SystemVerilogSymbolParser.Word)
+                    self.match(WorkspaceSymbolParser.Word)
                     self.state = 211
                     self.constant_bit_select()
                     self.state = 212
-                    self.match(SystemVerilogSymbolParser.Dot) 
+                    self.match(WorkspaceSymbolParser.Dot) 
                 self.state = 218
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
@@ -1566,24 +1566,24 @@ class SystemVerilogSymbolParser ( Parser ):
 
         def OpenBracket(self, i:int=None):
             if i is None:
-                return self.getTokens(SystemVerilogSymbolParser.OpenBracket)
+                return self.getTokens(WorkspaceSymbolParser.OpenBracket)
             else:
-                return self.getToken(SystemVerilogSymbolParser.OpenBracket, i)
+                return self.getToken(WorkspaceSymbolParser.OpenBracket, i)
 
         def Word(self, i:int=None):
             if i is None:
-                return self.getTokens(SystemVerilogSymbolParser.Word)
+                return self.getTokens(WorkspaceSymbolParser.Word)
             else:
-                return self.getToken(SystemVerilogSymbolParser.Word, i)
+                return self.getToken(WorkspaceSymbolParser.Word, i)
 
         def CloseBracket(self, i:int=None):
             if i is None:
-                return self.getTokens(SystemVerilogSymbolParser.CloseBracket)
+                return self.getTokens(WorkspaceSymbolParser.CloseBracket)
             else:
-                return self.getToken(SystemVerilogSymbolParser.CloseBracket, i)
+                return self.getToken(WorkspaceSymbolParser.CloseBracket, i)
 
         def getRuleIndex(self):
-            return SystemVerilogSymbolParser.RULE_constant_bit_select
+            return WorkspaceSymbolParser.RULE_constant_bit_select
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterConstant_bit_select" ):
@@ -1604,7 +1604,7 @@ class SystemVerilogSymbolParser ( Parser ):
 
     def constant_bit_select(self):
 
-        localctx = SystemVerilogSymbolParser.Constant_bit_selectContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolParser.Constant_bit_selectContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_constant_bit_select)
         self._la = 0 # Token type
         try:
@@ -1612,13 +1612,13 @@ class SystemVerilogSymbolParser ( Parser ):
             self.state = 226
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SystemVerilogSymbolParser.OpenBracket:
+            while _la==WorkspaceSymbolParser.OpenBracket:
                 self.state = 221
-                self.match(SystemVerilogSymbolParser.OpenBracket)
+                self.match(WorkspaceSymbolParser.OpenBracket)
                 self.state = 222
-                self.match(SystemVerilogSymbolParser.Word)
+                self.match(WorkspaceSymbolParser.Word)
                 self.state = 223
-                self.match(SystemVerilogSymbolParser.CloseBracket)
+                self.match(WorkspaceSymbolParser.CloseBracket)
                 self.state = 228
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
