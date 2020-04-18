@@ -6,6 +6,7 @@ from pygls.uris import to_fs_path
 
 from .database import Database
 from .verilog_parser.workspace_symbols import parse as parse_workspace_symbols
+from .verilog_parser.document_symbols import parse as parse_document_symbols
 
 
 class HdlLanguageServer(LanguageServer):

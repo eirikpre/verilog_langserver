@@ -18,34 +18,6 @@ def parse(text: str):
     return visitor.items
 
 
-class HdlDocumentSymbol(DocumentSymbol):
-    # self,
-    # name: str,
-    # kind: int,
-    # range: 'Range',
-    # selection_range: 'Range',
-    # detail: str = None,
-    # children: List['DocumentSymbol'] = None,
-    # deprecated: bool = False):
-    def __init__(self, ctx, kind=None):
-        identifier = ctx.getChild(0, Parser.IdentifierContext).start.text
-        ra = Range( start=Position(ctx.start.line, ctx.start.column),
-                    end=Position(ctx.stop.line, ctx.stop.column))
-        super().__init__(
-            name=identifier,
-            kind=kind,
-            range=ra,
-            selection_range=ra,
-            children=[]
-        )
-
-def get_symbol_kind(ctx):
-    if isinstance(ctx, Parser.Interface_declarationContext):
-        return
-    # elif expression:
-    #     pass
-    return SymbolKind.Variable
-
 class VerilogVisitor(Visitor):
 
     def __init__(self):
