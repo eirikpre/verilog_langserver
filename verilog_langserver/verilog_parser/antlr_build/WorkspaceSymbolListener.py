@@ -80,6 +80,15 @@ class WorkspaceSymbolListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by WorkspaceSymbolParser#udp_declaration.
+    def enterUdp_declaration(self, ctx:WorkspaceSymbolParser.Udp_declarationContext):
+        pass
+
+    # Exit a parse tree produced by WorkspaceSymbolParser#udp_declaration.
+    def exitUdp_declaration(self, ctx:WorkspaceSymbolParser.Udp_declarationContext):
+        pass
+
+
     # Enter a parse tree produced by WorkspaceSymbolParser#package_item.
     def enterPackage_item(self, ctx:WorkspaceSymbolParser.Package_itemContext):
         pass

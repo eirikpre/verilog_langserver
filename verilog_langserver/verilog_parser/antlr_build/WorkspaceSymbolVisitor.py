@@ -49,6 +49,11 @@ class WorkspaceSymbolVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by WorkspaceSymbolParser#udp_declaration.
+    def visitUdp_declaration(self, ctx:WorkspaceSymbolParser.Udp_declarationContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by WorkspaceSymbolParser#package_item.
     def visitPackage_item(self, ctx:WorkspaceSymbolParser.Package_itemContext):
         return self.visitChildren(ctx)

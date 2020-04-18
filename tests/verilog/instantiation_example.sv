@@ -11,6 +11,7 @@ module adder(
   output [6:0] c
 );
 // -------------------------------------------------------
+  some illegal stuff
 
   adder u_adder (
     .clk      (clk),

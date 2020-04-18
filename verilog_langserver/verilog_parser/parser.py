@@ -1,12 +1,14 @@
 import sys
 import antlr4
+import time
 
-# from .antlr_build.diagnosis.SystemVerilogLexer import SystemVerilogLexer as DiagnosisLexer
-# from .antlr_build.diagnosis.SystemVerilogParser import SystemVerilogParser as DiagnosisParser
+from .antlr_build.diagnosis.SystemVerilogLexer import SystemVerilogLexer as DiagnosisLexer
+from .antlr_build.diagnosis.SystemVerilogParser import SystemVerilogParser as DiagnosisParser
+from .diagnosis import DiagnosisListener
 
 from .antlr_build.WorkspaceSymbolLexer import WorkspaceSymbolLexer
 from .antlr_build.WorkspaceSymbolParser import WorkspaceSymbolParser
-from .fast_visitor import FastVisitor
+from .ws_symbol import WSVisitor as WorkspaceSymbolVisitor
 
 
 class Parser:
@@ -31,9 +33,24 @@ class Parser:
         parser = WorkspaceSymbolParser(stream)
         tree = parser.source()
 
-        visitor = FastVisitor(fname)
+        visitor = WorkspaceSymbolVisitor(fname)
         result = visitor.visit(tree)
         if result is not None:
             raise 'Something is up'
 
         return visitor.items
+
+    # Diagnosis is extremly slow at the moment,
+    # should use the antlr, diagnostic tool to figure
+    # out why.
+    def parse_diagnosis(self, fname: str):
+        input_stream = antlr4.FileStream(fname)
+        lexer = DiagnosisLexer(input_stream)
+        stream = antlr4.CommonTokenStream(lexer)
+        parser = DiagnosisParser(stream)
+        listener = DiagnosisListener()
+        parser.addErrorListener(listener)
+        tree = parser.system_verilog_text()
+
+        return listener.errors
+

@@ -12,24 +12,47 @@ String: '"' (~["] | '\\"')* '"' ;
 
 COMPILER_DIRECTIVE: GRAVE Word .*? EOL -> skip;
 
-OpenBracket               : '[';
-CloseBracket              : ']';
-OpenParen                 : '(';
-CloseParen                : ')';
-OpenBrace                 : '{';
-CloseBrace                : '}';
-SemiColon                 : ';';
-Colon                     : ':';
-Comma                     : ',';
-Assign                    : '=';
-QuestionMark              : '?';
-Dot                       : '.';
+OpenBracket : '[';
+CloseBracket: ']';
+OpenParen   : '(';
+CloseParen  : ')';
+OpenBrace   : '{';
+CloseBrace  : '}';
+SemiColon   : ';';
+Colon       : ':';
+Comma       : ',';
+Assign      : '=';
+QuestionMark: '?';
+Dot         : '.';
+Apostrophe  : APOSTROPHE;
 
 Operators: '+'|'-'|'*'|'<'|'>'|'='|'%'|'!'|'~'|'@'|'$'|'#';
 // ====================
 //       Keywords
 // ====================
+Module      : 'module';
+Endmodule   : 'endmodule';
+Interface   : 'interface';
+Endinterface: 'endinterface';
+Class       : 'class';
+Endclass    : 'endclass';
+Config      : 'config';
+Endconfig   : 'endconfig';
+Primitive   : 'primitive';
+Endprimitive: 'endprimitive';
+Program     : 'program';
+Endprogram  : 'endprogram';
+Task        : 'task';
+Endtask     : 'endtask';
+Function    : 'function';
+Endfunction : 'endfunction';
+Package     : 'package';
+Endpackage  : 'endpackage';
 
+Input  : 'input';
+Output : 'output';
+Virtual: 'virtual';
+Typedef: 'typedef';
 
 // ====================
 //       Numbers

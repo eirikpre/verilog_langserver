@@ -11,12 +11,12 @@ declaration:
     | package_declaration
     | package_item
     | config_declaration
-    // | .+? This is a bad idea due to performance!
+    | udp_declaration
+    // | .+? This severely hurts performance!
     ;
-    //  | udp_declaration
     //  | ( attribute_instance )* bind_directive
-    //  | timescale_compiler_directive
-    //  | include_compiler_directive
+    //  | timescale_compiler_directive # Ignored in lexer rules!
+    //  | include_compiler_directive   # Ignored in lexer rules!
 
 
 module_declaration   : 'module' identifier parameter_port_list? .*? 'endmodule' label?;
@@ -25,8 +25,14 @@ program_declaration  : 'program' life_time? identifier .*? 'endprogram' label?;
 package_declaration  : 'package' (package_item | .*?) 'endpackage' label?;
 config_declaration   : 'config' identifier .*? 'endconfig' label?;
 class_declaration    : 'virtual'? 'class' life_time? identifier .*? 'endclass' label?;
+udp_declaration      : 'primitive' identifier .*? 'endprimitive' label?;
 
-package_item: task_declaration | function_declaration | class_declaration | type_declaration;
+package_item:
+ task_declaration
+ | function_declaration
+ | class_declaration
+ | type_declaration
+ ;
 
 task_declaration    : 'task' identifier .*? 'endtask' label?;
 function_declaration: 'function' return_val identifier '(' .*? 'endfunction' label?;
