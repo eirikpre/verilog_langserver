@@ -1,4 +1,4 @@
-# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/WorkspaceSymbol.g4 by ANTLR 4.8
+# Generated from C:\Users\eirik\Desktop\verilog-langserver\verilog_langserver\verilog_parser/grammar/WorkspaceSymbols.g4 by ANTLR 4.8
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -11,7 +11,7 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3;")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3=")
         buf.write("\u0106\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -39,7 +39,7 @@ def serializedATN():
         buf.write("\13\25\3\25\3\25\3\26\3\26\3\26\7\26\u0101\n\26\f\26\16")
         buf.write("\26\u0104\13\26\3\26\17ETco}\u008f\u009b\u00ad\u00bb\u00c6")
         buf.write("\u00d0\u00d9\u00e2\2\27\2\4\6\b\n\f\16\20\22\24\26\30")
-        buf.write("\32\34\36 \"$&(*\2\3\3\2\7\b\2\u011a\2/\3\2\2\2\4;\3\2")
+        buf.write("\32\34\36 \"$&(*\2\3\3\2\5\6\2\u011a\2/\3\2\2\2\4;\3\2")
         buf.write("\2\2\6=\3\2\2\2\bL\3\2\2\2\n[\3\2\2\2\fj\3\2\2\2\16x\3")
         buf.write("\2\2\2\20\u0085\3\2\2\2\22\u0096\3\2\2\2\24\u00a6\3\2")
         buf.write("\2\2\26\u00a8\3\2\2\2\30\u00b4\3\2\2\2\32\u00c2\3\2\2")
@@ -50,87 +50,87 @@ def serializedATN():
         buf.write("\7\2\2\3\63\3\3\2\2\2\64<\5\6\4\2\65<\5\b\5\2\66<\5\n")
         buf.write("\6\2\67<\5\f\7\28<\5\24\13\29<\5\16\b\2:<\5\22\n\2;\64")
         buf.write("\3\2\2\2;\65\3\2\2\2;\66\3\2\2\2;\67\3\2\2\2;8\3\2\2\2")
-        buf.write(";9\3\2\2\2;:\3\2\2\2<\5\3\2\2\2=>\7\37\2\2>@\5$\23\2?")
+        buf.write(";9\3\2\2\2;:\3\2\2\2<\5\3\2\2\2=>\7\35\2\2>@\5$\23\2?")
         buf.write("A\5\34\17\2@?\3\2\2\2@A\3\2\2\2AE\3\2\2\2BD\13\2\2\2C")
         buf.write("B\3\2\2\2DG\3\2\2\2EF\3\2\2\2EC\3\2\2\2FH\3\2\2\2GE\3")
-        buf.write("\2\2\2HJ\7 \2\2IK\5&\24\2JI\3\2\2\2JK\3\2\2\2K\7\3\2\2")
-        buf.write("\2LM\7!\2\2MO\5$\23\2NP\5\34\17\2ON\3\2\2\2OP\3\2\2\2")
-        buf.write("PT\3\2\2\2QS\13\2\2\2RQ\3\2\2\2SV\3\2\2\2TU\3\2\2\2TR")
-        buf.write("\3\2\2\2UW\3\2\2\2VT\3\2\2\2WY\7\"\2\2XZ\5&\24\2YX\3\2")
-        buf.write("\2\2YZ\3\2\2\2Z\t\3\2\2\2[]\7)\2\2\\^\5\"\22\2]\\\3\2")
-        buf.write("\2\2]^\3\2\2\2^_\3\2\2\2_c\5$\23\2`b\13\2\2\2a`\3\2\2")
-        buf.write("\2be\3\2\2\2cd\3\2\2\2ca\3\2\2\2df\3\2\2\2ec\3\2\2\2f")
-        buf.write("h\7*\2\2gi\5&\24\2hg\3\2\2\2hi\3\2\2\2i\13\3\2\2\2jr\7")
-        buf.write("/\2\2ks\5\24\13\2ln\13\2\2\2ml\3\2\2\2nq\3\2\2\2op\3\2")
-        buf.write("\2\2om\3\2\2\2ps\3\2\2\2qo\3\2\2\2rk\3\2\2\2ro\3\2\2\2")
-        buf.write("st\3\2\2\2tv\7\60\2\2uw\5&\24\2vu\3\2\2\2vw\3\2\2\2w\r")
-        buf.write("\3\2\2\2xy\7%\2\2y}\5$\23\2z|\13\2\2\2{z\3\2\2\2|\177")
-        buf.write("\3\2\2\2}~\3\2\2\2}{\3\2\2\2~\u0080\3\2\2\2\177}\3\2\2")
-        buf.write("\2\u0080\u0082\7&\2\2\u0081\u0083\5&\24\2\u0082\u0081")
-        buf.write("\3\2\2\2\u0082\u0083\3\2\2\2\u0083\17\3\2\2\2\u0084\u0086")
-        buf.write("\7\3\2\2\u0085\u0084\3\2\2\2\u0085\u0086\3\2\2\2\u0086")
-        buf.write("\u0087\3\2\2\2\u0087\u0089\7#\2\2\u0088\u008a\5\"\22\2")
-        buf.write("\u0089\u0088\3\2\2\2\u0089\u008a\3\2\2\2\u008a\u008b\3")
-        buf.write("\2\2\2\u008b\u008f\5$\23\2\u008c\u008e\13\2\2\2\u008d")
-        buf.write("\u008c\3\2\2\2\u008e\u0091\3\2\2\2\u008f\u0090\3\2\2\2")
-        buf.write("\u008f\u008d\3\2\2\2\u0090\u0092\3\2\2\2\u0091\u008f\3")
-        buf.write("\2\2\2\u0092\u0094\7$\2\2\u0093\u0095\5&\24\2\u0094\u0093")
-        buf.write("\3\2\2\2\u0094\u0095\3\2\2\2\u0095\21\3\2\2\2\u0096\u0097")
-        buf.write("\7\'\2\2\u0097\u009b\5$\23\2\u0098\u009a\13\2\2\2\u0099")
-        buf.write("\u0098\3\2\2\2\u009a\u009d\3\2\2\2\u009b\u009c\3\2\2\2")
-        buf.write("\u009b\u0099\3\2\2\2\u009c\u009e\3\2\2\2\u009d\u009b\3")
-        buf.write("\2\2\2\u009e\u00a0\7(\2\2\u009f\u00a1\5&\24\2\u00a0\u009f")
-        buf.write("\3\2\2\2\u00a0\u00a1\3\2\2\2\u00a1\23\3\2\2\2\u00a2\u00a7")
-        buf.write("\5\26\f\2\u00a3\u00a7\5\30\r\2\u00a4\u00a7\5\20\t\2\u00a5")
-        buf.write("\u00a7\5\32\16\2\u00a6\u00a2\3\2\2\2\u00a6\u00a3\3\2\2")
-        buf.write("\2\u00a6\u00a4\3\2\2\2\u00a6\u00a5\3\2\2\2\u00a7\25\3")
-        buf.write("\2\2\2\u00a8\u00a9\7+\2\2\u00a9\u00ad\5$\23\2\u00aa\u00ac")
-        buf.write("\13\2\2\2\u00ab\u00aa\3\2\2\2\u00ac\u00af\3\2\2\2\u00ad")
-        buf.write("\u00ae\3\2\2\2\u00ad\u00ab\3\2\2\2\u00ae\u00b0\3\2\2\2")
-        buf.write("\u00af\u00ad\3\2\2\2\u00b0\u00b2\7,\2\2\u00b1\u00b3\5")
-        buf.write("&\24\2\u00b2\u00b1\3\2\2\2\u00b2\u00b3\3\2\2\2\u00b3\27")
-        buf.write("\3\2\2\2\u00b4\u00b5\7-\2\2\u00b5\u00b6\5 \21\2\u00b6")
-        buf.write("\u00b7\5$\23\2\u00b7\u00bb\7\23\2\2\u00b8\u00ba\13\2\2")
-        buf.write("\2\u00b9\u00b8\3\2\2\2\u00ba\u00bd\3\2\2\2\u00bb\u00bc")
-        buf.write("\3\2\2\2\u00bb\u00b9\3\2\2\2\u00bc\u00be\3\2\2\2\u00bd")
-        buf.write("\u00bb\3\2\2\2\u00be\u00c0\7.\2\2\u00bf\u00c1\5&\24\2")
-        buf.write("\u00c0\u00bf\3\2\2\2\u00c0\u00c1\3\2\2\2\u00c1\31\3\2")
-        buf.write("\2\2\u00c2\u00c6\7\4\2\2\u00c3\u00c5\13\2\2\2\u00c4\u00c3")
-        buf.write("\3\2\2\2\u00c5\u00c8\3\2\2\2\u00c6\u00c7\3\2\2\2\u00c6")
-        buf.write("\u00c4\3\2\2\2\u00c7\u00c9\3\2\2\2\u00c8\u00c6\3\2\2\2")
-        buf.write("\u00c9\u00ca\5$\23\2\u00ca\u00cb\7\27\2\2\u00cb\33\3\2")
-        buf.write("\2\2\u00cc\u00d0\7\5\2\2\u00cd\u00cf\13\2\2\2\u00ce\u00cd")
-        buf.write("\3\2\2\2\u00cf\u00d2\3\2\2\2\u00d0\u00d1\3\2\2\2\u00d0")
-        buf.write("\u00ce\3\2\2\2\u00d1\u00d3\3\2\2\2\u00d2\u00d0\3\2\2\2")
-        buf.write("\u00d3\u00d4\7\24\2\2\u00d4\35\3\2\2\2\u00d5\u00d9\7\23")
-        buf.write("\2\2\u00d6\u00d8\13\2\2\2\u00d7\u00d6\3\2\2\2\u00d8\u00db")
-        buf.write("\3\2\2\2\u00d9\u00da\3\2\2\2\u00d9\u00d7\3\2\2\2\u00da")
-        buf.write("\u00dc\3\2\2\2\u00db\u00d9\3\2\2\2\u00dc\u00dd\7\24\2")
-        buf.write("\2\u00dd\37\3\2\2\2\u00de\u00e6\7\6\2\2\u00df\u00e1\13")
-        buf.write("\2\2\2\u00e0\u00df\3\2\2\2\u00e1\u00e4\3\2\2\2\u00e2\u00e3")
-        buf.write("\3\2\2\2\u00e2\u00e0\3\2\2\2\u00e3\u00e6\3\2\2\2\u00e4")
-        buf.write("\u00e2\3\2\2\2\u00e5\u00de\3\2\2\2\u00e5\u00e2\3\2\2\2")
-        buf.write("\u00e6!\3\2\2\2\u00e7\u00e8\t\2\2\2\u00e8#\3\2\2\2\u00e9")
-        buf.write("\u00ea\7;\2\2\u00ea%\3\2\2\2\u00eb\u00ec\7\30\2\2\u00ec")
-        buf.write("\u00ed\5$\23\2\u00ed\'\3\2\2\2\u00ee\u00ef\7\t\2\2\u00ef")
-        buf.write("\u00f1\7\34\2\2\u00f0\u00ee\3\2\2\2\u00f0\u00f1\3\2\2")
-        buf.write("\2\u00f1\u00f8\3\2\2\2\u00f2\u00f3\7;\2\2\u00f3\u00f4")
-        buf.write("\5*\26\2\u00f4\u00f5\7\34\2\2\u00f5\u00f7\3\2\2\2\u00f6")
-        buf.write("\u00f2\3\2\2\2\u00f7\u00fa\3\2\2\2\u00f8\u00f6\3\2\2\2")
-        buf.write("\u00f8\u00f9\3\2\2\2\u00f9\u00fb\3\2\2\2\u00fa\u00f8\3")
-        buf.write("\2\2\2\u00fb\u00fc\5$\23\2\u00fc)\3\2\2\2\u00fd\u00fe")
-        buf.write("\7\21\2\2\u00fe\u00ff\7;\2\2\u00ff\u0101\7\22\2\2\u0100")
-        buf.write("\u00fd\3\2\2\2\u0101\u0104\3\2\2\2\u0102\u0100\3\2\2\2")
-        buf.write("\u0102\u0103\3\2\2\2\u0103+\3\2\2\2\u0104\u0102\3\2\2")
-        buf.write("\2%/;@EJOTY]chorv}\u0082\u0085\u0089\u008f\u0094\u009b")
-        buf.write("\u00a0\u00a6\u00ad\u00b2\u00bb\u00c0\u00c6\u00d0\u00d9")
-        buf.write("\u00e2\u00e5\u00f0\u00f8\u0102")
+        buf.write("\2\2\2HJ\7\36\2\2IK\5&\24\2JI\3\2\2\2JK\3\2\2\2K\7\3\2")
+        buf.write("\2\2LM\7\37\2\2MO\5$\23\2NP\5\34\17\2ON\3\2\2\2OP\3\2")
+        buf.write("\2\2PT\3\2\2\2QS\13\2\2\2RQ\3\2\2\2SV\3\2\2\2TU\3\2\2")
+        buf.write("\2TR\3\2\2\2UW\3\2\2\2VT\3\2\2\2WY\7 \2\2XZ\5&\24\2YX")
+        buf.write("\3\2\2\2YZ\3\2\2\2Z\t\3\2\2\2[]\7\'\2\2\\^\5\"\22\2]\\")
+        buf.write("\3\2\2\2]^\3\2\2\2^_\3\2\2\2_c\5$\23\2`b\13\2\2\2a`\3")
+        buf.write("\2\2\2be\3\2\2\2cd\3\2\2\2ca\3\2\2\2df\3\2\2\2ec\3\2\2")
+        buf.write("\2fh\7(\2\2gi\5&\24\2hg\3\2\2\2hi\3\2\2\2i\13\3\2\2\2")
+        buf.write("jr\7-\2\2ks\5\24\13\2ln\13\2\2\2ml\3\2\2\2nq\3\2\2\2o")
+        buf.write("p\3\2\2\2om\3\2\2\2ps\3\2\2\2qo\3\2\2\2rk\3\2\2\2ro\3")
+        buf.write("\2\2\2st\3\2\2\2tv\7.\2\2uw\5&\24\2vu\3\2\2\2vw\3\2\2")
+        buf.write("\2w\r\3\2\2\2xy\7#\2\2y}\5$\23\2z|\13\2\2\2{z\3\2\2\2")
+        buf.write("|\177\3\2\2\2}~\3\2\2\2}{\3\2\2\2~\u0080\3\2\2\2\177}")
+        buf.write("\3\2\2\2\u0080\u0082\7$\2\2\u0081\u0083\5&\24\2\u0082")
+        buf.write("\u0081\3\2\2\2\u0082\u0083\3\2\2\2\u0083\17\3\2\2\2\u0084")
+        buf.write("\u0086\7\61\2\2\u0085\u0084\3\2\2\2\u0085\u0086\3\2\2")
+        buf.write("\2\u0086\u0087\3\2\2\2\u0087\u0089\7!\2\2\u0088\u008a")
+        buf.write("\5\"\22\2\u0089\u0088\3\2\2\2\u0089\u008a\3\2\2\2\u008a")
+        buf.write("\u008b\3\2\2\2\u008b\u008f\5$\23\2\u008c\u008e\13\2\2")
+        buf.write("\2\u008d\u008c\3\2\2\2\u008e\u0091\3\2\2\2\u008f\u0090")
+        buf.write("\3\2\2\2\u008f\u008d\3\2\2\2\u0090\u0092\3\2\2\2\u0091")
+        buf.write("\u008f\3\2\2\2\u0092\u0094\7\"\2\2\u0093\u0095\5&\24\2")
+        buf.write("\u0094\u0093\3\2\2\2\u0094\u0095\3\2\2\2\u0095\21\3\2")
+        buf.write("\2\2\u0096\u0097\7%\2\2\u0097\u009b\5$\23\2\u0098\u009a")
+        buf.write("\13\2\2\2\u0099\u0098\3\2\2\2\u009a\u009d\3\2\2\2\u009b")
+        buf.write("\u009c\3\2\2\2\u009b\u0099\3\2\2\2\u009c\u009e\3\2\2\2")
+        buf.write("\u009d\u009b\3\2\2\2\u009e\u00a0\7&\2\2\u009f\u00a1\5")
+        buf.write("&\24\2\u00a0\u009f\3\2\2\2\u00a0\u00a1\3\2\2\2\u00a1\23")
+        buf.write("\3\2\2\2\u00a2\u00a7\5\26\f\2\u00a3\u00a7\5\30\r\2\u00a4")
+        buf.write("\u00a7\5\20\t\2\u00a5\u00a7\5\32\16\2\u00a6\u00a2\3\2")
+        buf.write("\2\2\u00a6\u00a3\3\2\2\2\u00a6\u00a4\3\2\2\2\u00a6\u00a5")
+        buf.write("\3\2\2\2\u00a7\25\3\2\2\2\u00a8\u00a9\7)\2\2\u00a9\u00ad")
+        buf.write("\5$\23\2\u00aa\u00ac\13\2\2\2\u00ab\u00aa\3\2\2\2\u00ac")
+        buf.write("\u00af\3\2\2\2\u00ad\u00ae\3\2\2\2\u00ad\u00ab\3\2\2\2")
+        buf.write("\u00ae\u00b0\3\2\2\2\u00af\u00ad\3\2\2\2\u00b0\u00b2\7")
+        buf.write("*\2\2\u00b1\u00b3\5&\24\2\u00b2\u00b1\3\2\2\2\u00b2\u00b3")
+        buf.write("\3\2\2\2\u00b3\27\3\2\2\2\u00b4\u00b5\7+\2\2\u00b5\u00b6")
+        buf.write("\5 \21\2\u00b6\u00b7\5$\23\2\u00b7\u00bb\7\21\2\2\u00b8")
+        buf.write("\u00ba\13\2\2\2\u00b9\u00b8\3\2\2\2\u00ba\u00bd\3\2\2")
+        buf.write("\2\u00bb\u00bc\3\2\2\2\u00bb\u00b9\3\2\2\2\u00bc\u00be")
+        buf.write("\3\2\2\2\u00bd\u00bb\3\2\2\2\u00be\u00c0\7,\2\2\u00bf")
+        buf.write("\u00c1\5&\24\2\u00c0\u00bf\3\2\2\2\u00c0\u00c1\3\2\2\2")
+        buf.write("\u00c1\31\3\2\2\2\u00c2\u00c6\7\62\2\2\u00c3\u00c5\13")
+        buf.write("\2\2\2\u00c4\u00c3\3\2\2\2\u00c5\u00c8\3\2\2\2\u00c6\u00c7")
+        buf.write("\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c7\u00c9\3\2\2\2\u00c8")
+        buf.write("\u00c6\3\2\2\2\u00c9\u00ca\5$\23\2\u00ca\u00cb\7\25\2")
+        buf.write("\2\u00cb\33\3\2\2\2\u00cc\u00d0\7\3\2\2\u00cd\u00cf\13")
+        buf.write("\2\2\2\u00ce\u00cd\3\2\2\2\u00cf\u00d2\3\2\2\2\u00d0\u00d1")
+        buf.write("\3\2\2\2\u00d0\u00ce\3\2\2\2\u00d1\u00d3\3\2\2\2\u00d2")
+        buf.write("\u00d0\3\2\2\2\u00d3\u00d4\7\22\2\2\u00d4\35\3\2\2\2\u00d5")
+        buf.write("\u00d9\7\21\2\2\u00d6\u00d8\13\2\2\2\u00d7\u00d6\3\2\2")
+        buf.write("\2\u00d8\u00db\3\2\2\2\u00d9\u00da\3\2\2\2\u00d9\u00d7")
+        buf.write("\3\2\2\2\u00da\u00dc\3\2\2\2\u00db\u00d9\3\2\2\2\u00dc")
+        buf.write("\u00dd\7\22\2\2\u00dd\37\3\2\2\2\u00de\u00e6\7\4\2\2\u00df")
+        buf.write("\u00e1\13\2\2\2\u00e0\u00df\3\2\2\2\u00e1\u00e4\3\2\2")
+        buf.write("\2\u00e2\u00e3\3\2\2\2\u00e2\u00e0\3\2\2\2\u00e3\u00e6")
+        buf.write("\3\2\2\2\u00e4\u00e2\3\2\2\2\u00e5\u00de\3\2\2\2\u00e5")
+        buf.write("\u00e2\3\2\2\2\u00e6!\3\2\2\2\u00e7\u00e8\t\2\2\2\u00e8")
+        buf.write("#\3\2\2\2\u00e9\u00ea\7=\2\2\u00ea%\3\2\2\2\u00eb\u00ec")
+        buf.write("\7\26\2\2\u00ec\u00ed\5$\23\2\u00ed\'\3\2\2\2\u00ee\u00ef")
+        buf.write("\7\7\2\2\u00ef\u00f1\7\32\2\2\u00f0\u00ee\3\2\2\2\u00f0")
+        buf.write("\u00f1\3\2\2\2\u00f1\u00f8\3\2\2\2\u00f2\u00f3\7=\2\2")
+        buf.write("\u00f3\u00f4\5*\26\2\u00f4\u00f5\7\32\2\2\u00f5\u00f7")
+        buf.write("\3\2\2\2\u00f6\u00f2\3\2\2\2\u00f7\u00fa\3\2\2\2\u00f8")
+        buf.write("\u00f6\3\2\2\2\u00f8\u00f9\3\2\2\2\u00f9\u00fb\3\2\2\2")
+        buf.write("\u00fa\u00f8\3\2\2\2\u00fb\u00fc\5$\23\2\u00fc)\3\2\2")
+        buf.write("\2\u00fd\u00fe\7\17\2\2\u00fe\u00ff\7=\2\2\u00ff\u0101")
+        buf.write("\7\20\2\2\u0100\u00fd\3\2\2\2\u0101\u0104\3\2\2\2\u0102")
+        buf.write("\u0100\3\2\2\2\u0102\u0103\3\2\2\2\u0103+\3\2\2\2\u0104")
+        buf.write("\u0102\3\2\2\2%/;@EJOTY]chorv}\u0082\u0085\u0089\u008f")
+        buf.write("\u0094\u009b\u00a0\u00a6\u00ad\u00b2\u00bb\u00c0\u00c6")
+        buf.write("\u00d0\u00d9\u00e2\u00e5\u00f0\u00f8\u0102")
         return buf.getvalue()
 
 
-class WorkspaceSymbolParser ( Parser ):
+class WorkspaceSymbolsParser ( Parser ):
 
-    grammarFileName = "WorkspaceSymbol.g4"
+    grammarFileName = "WorkspaceSymbols.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -138,21 +138,21 @@ class WorkspaceSymbolParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'virtual'", "'typedef'", "'#('", "'void'", 
-                     "'static'", "'automatic'", "'$root'", "<INVALID>", 
-                     "<INVALID>", "' '", "'\t'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "'['", "']'", "'('", "')'", "'{'", "'}'", 
-                     "';'", "':'", "','", "'='", "'?'", "'.'", "<INVALID>", 
-                     "<INVALID>", "'module'", "'endmodule'", "'interface'", 
-                     "'endinterface'", "'class'", "'endclass'", "'config'", 
-                     "'endconfig'", "'primitive'", "'endprimitive'", "'program'", 
-                     "'endprogram'", "'task'", "'endtask'", "'function'", 
-                     "'endfunction'", "'package'", "'endpackage'" ]
+    literalNames = [ "<INVALID>", "'#('", "'void'", "'static'", "'automatic'", 
+                     "'$root'", "<INVALID>", "<INVALID>", "' '", "'\t'", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'['", "']'", 
+                     "'('", "')'", "'{'", "'}'", "';'", "':'", "','", "'='", 
+                     "'?'", "'.'", "<INVALID>", "<INVALID>", "'module'", 
+                     "'endmodule'", "'interface'", "'endinterface'", "'class'", 
+                     "'endclass'", "'config'", "'endconfig'", "'primitive'", 
+                     "'endprimitive'", "'program'", "'endprogram'", "'task'", 
+                     "'endtask'", "'function'", "'endfunction'", "'package'", 
+                     "'endpackage'", "'input'", "'output'", "'virtual'", 
+                     "'typedef'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "SINGLELINE_COMMENT", "MULTILINE_COMMENT", "SPACE", 
-                      "TAB", "NEWLINE", "String", "COMPILER_DIRECTIVE", 
+                      "<INVALID>", "<INVALID>", "SINGLELINE_COMMENT", "MULTILINE_COMMENT", 
+                      "SPACE", "TAB", "NEWLINE", "String", "COMPILER_DIRECTIVE", 
                       "OpenBracket", "CloseBracket", "OpenParen", "CloseParen", 
                       "OpenBrace", "CloseBrace", "SemiColon", "Colon", "Comma", 
                       "Assign", "QuestionMark", "Dot", "Apostrophe", "Operators", 
@@ -160,7 +160,8 @@ class WorkspaceSymbolParser ( Parser ):
                       "Class", "Endclass", "Config", "Endconfig", "Primitive", 
                       "Endprimitive", "Program", "Endprogram", "Task", "Endtask", 
                       "Function", "Endfunction", "Package", "Endpackage", 
-                      "Number", "IntegralNumber", "RealNumber", "UnsignedNumber", 
+                      "Input", "Output", "Virtual", "Typedef", "Number", 
+                      "IntegralNumber", "RealNumber", "UnsignedNumber", 
                       "DecimalNumber", "BinaryNumber", "OctalNumber", "HexNumber", 
                       "UnbasedUnsizedLiteral", "Time", "Word" ]
 
@@ -199,58 +200,60 @@ class WorkspaceSymbolParser ( Parser ):
     T__2=3
     T__3=4
     T__4=5
-    T__5=6
-    T__6=7
-    SINGLELINE_COMMENT=8
-    MULTILINE_COMMENT=9
-    SPACE=10
-    TAB=11
-    NEWLINE=12
-    String=13
-    COMPILER_DIRECTIVE=14
-    OpenBracket=15
-    CloseBracket=16
-    OpenParen=17
-    CloseParen=18
-    OpenBrace=19
-    CloseBrace=20
-    SemiColon=21
-    Colon=22
-    Comma=23
-    Assign=24
-    QuestionMark=25
-    Dot=26
-    Apostrophe=27
-    Operators=28
-    Module=29
-    Endmodule=30
-    Interface=31
-    Endinterface=32
-    Class=33
-    Endclass=34
-    Config=35
-    Endconfig=36
-    Primitive=37
-    Endprimitive=38
-    Program=39
-    Endprogram=40
-    Task=41
-    Endtask=42
-    Function=43
-    Endfunction=44
-    Package=45
-    Endpackage=46
-    Number=47
-    IntegralNumber=48
-    RealNumber=49
-    UnsignedNumber=50
-    DecimalNumber=51
-    BinaryNumber=52
-    OctalNumber=53
-    HexNumber=54
-    UnbasedUnsizedLiteral=55
-    Time=56
-    Word=57
+    SINGLELINE_COMMENT=6
+    MULTILINE_COMMENT=7
+    SPACE=8
+    TAB=9
+    NEWLINE=10
+    String=11
+    COMPILER_DIRECTIVE=12
+    OpenBracket=13
+    CloseBracket=14
+    OpenParen=15
+    CloseParen=16
+    OpenBrace=17
+    CloseBrace=18
+    SemiColon=19
+    Colon=20
+    Comma=21
+    Assign=22
+    QuestionMark=23
+    Dot=24
+    Apostrophe=25
+    Operators=26
+    Module=27
+    Endmodule=28
+    Interface=29
+    Endinterface=30
+    Class=31
+    Endclass=32
+    Config=33
+    Endconfig=34
+    Primitive=35
+    Endprimitive=36
+    Program=37
+    Endprogram=38
+    Task=39
+    Endtask=40
+    Function=41
+    Endfunction=42
+    Package=43
+    Endpackage=44
+    Input=45
+    Output=46
+    Virtual=47
+    Typedef=48
+    Number=49
+    IntegralNumber=50
+    RealNumber=51
+    UnsignedNumber=52
+    DecimalNumber=53
+    BinaryNumber=54
+    OctalNumber=55
+    HexNumber=56
+    UnbasedUnsizedLiteral=57
+    Time=58
+    Word=59
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -268,25 +271,17 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(WorkspaceSymbolParser.EOF, 0)
+            return self.getToken(WorkspaceSymbolsParser.EOF, 0)
 
         def declaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(WorkspaceSymbolParser.DeclarationContext)
+                return self.getTypedRuleContexts(WorkspaceSymbolsParser.DeclarationContext)
             else:
-                return self.getTypedRuleContext(WorkspaceSymbolParser.DeclarationContext,i)
+                return self.getTypedRuleContext(WorkspaceSymbolsParser.DeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_source
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSource" ):
-                listener.enterSource(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSource" ):
-                listener.exitSource(self)
+            return WorkspaceSymbolsParser.RULE_source
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitSource" ):
@@ -299,7 +294,7 @@ class WorkspaceSymbolParser ( Parser ):
 
     def source(self):
 
-        localctx = WorkspaceSymbolParser.SourceContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.SourceContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_source)
         self._la = 0 # Token type
         try:
@@ -307,7 +302,7 @@ class WorkspaceSymbolParser ( Parser ):
             self.state = 45
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << WorkspaceSymbolParser.T__0) | (1 << WorkspaceSymbolParser.T__1) | (1 << WorkspaceSymbolParser.Module) | (1 << WorkspaceSymbolParser.Interface) | (1 << WorkspaceSymbolParser.Class) | (1 << WorkspaceSymbolParser.Config) | (1 << WorkspaceSymbolParser.Primitive) | (1 << WorkspaceSymbolParser.Program) | (1 << WorkspaceSymbolParser.Task) | (1 << WorkspaceSymbolParser.Function) | (1 << WorkspaceSymbolParser.Package))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << WorkspaceSymbolsParser.Module) | (1 << WorkspaceSymbolsParser.Interface) | (1 << WorkspaceSymbolsParser.Class) | (1 << WorkspaceSymbolsParser.Config) | (1 << WorkspaceSymbolsParser.Primitive) | (1 << WorkspaceSymbolsParser.Program) | (1 << WorkspaceSymbolsParser.Task) | (1 << WorkspaceSymbolsParser.Function) | (1 << WorkspaceSymbolsParser.Package) | (1 << WorkspaceSymbolsParser.Virtual) | (1 << WorkspaceSymbolsParser.Typedef))) != 0):
                 self.state = 42
                 self.declaration()
                 self.state = 47
@@ -315,7 +310,7 @@ class WorkspaceSymbolParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 48
-            self.match(WorkspaceSymbolParser.EOF)
+            self.match(WorkspaceSymbolsParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -332,43 +327,35 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def module_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Module_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Module_declarationContext,0)
 
 
         def interface_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Interface_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Interface_declarationContext,0)
 
 
         def program_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Program_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Program_declarationContext,0)
 
 
         def package_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Package_declarationContext,0)
 
 
         def package_item(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_itemContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Package_itemContext,0)
 
 
         def config_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Config_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Config_declarationContext,0)
 
 
         def udp_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Udp_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Udp_declarationContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaration" ):
-                listener.enterDeclaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaration" ):
-                listener.exitDeclaration(self)
+            return WorkspaceSymbolsParser.RULE_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclaration" ):
@@ -381,43 +368,43 @@ class WorkspaceSymbolParser ( Parser ):
 
     def declaration(self):
 
-        localctx = WorkspaceSymbolParser.DeclarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.DeclarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_declaration)
         try:
             self.state = 57
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [WorkspaceSymbolParser.Module]:
+            if token in [WorkspaceSymbolsParser.Module]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 50
                 self.module_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.Interface]:
+            elif token in [WorkspaceSymbolsParser.Interface]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 51
                 self.interface_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.Program]:
+            elif token in [WorkspaceSymbolsParser.Program]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 52
                 self.program_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.Package]:
+            elif token in [WorkspaceSymbolsParser.Package]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 53
                 self.package_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.T__0, WorkspaceSymbolParser.T__1, WorkspaceSymbolParser.Class, WorkspaceSymbolParser.Task, WorkspaceSymbolParser.Function]:
+            elif token in [WorkspaceSymbolsParser.Class, WorkspaceSymbolsParser.Task, WorkspaceSymbolsParser.Function, WorkspaceSymbolsParser.Virtual, WorkspaceSymbolsParser.Typedef]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 54
                 self.package_item()
                 pass
-            elif token in [WorkspaceSymbolParser.Config]:
+            elif token in [WorkspaceSymbolsParser.Config]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 55
                 self.config_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.Primitive]:
+            elif token in [WorkspaceSymbolsParser.Primitive]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 56
                 self.udp_declaration()
@@ -441,33 +428,25 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Module(self):
-            return self.getToken(WorkspaceSymbolParser.Module, 0)
+            return self.getToken(WorkspaceSymbolsParser.Module, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endmodule(self):
-            return self.getToken(WorkspaceSymbolParser.Endmodule, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endmodule, 0)
 
         def parameter_port_list(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Parameter_port_listContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Parameter_port_listContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_module_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterModule_declaration" ):
-                listener.enterModule_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitModule_declaration" ):
-                listener.exitModule_declaration(self)
+            return WorkspaceSymbolsParser.RULE_module_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitModule_declaration" ):
@@ -480,13 +459,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def module_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Module_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Module_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_module_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 59
-            self.match(WorkspaceSymbolParser.Module)
+            self.match(WorkspaceSymbolsParser.Module)
             self.state = 60
             self.identifier()
             self.state = 62
@@ -509,11 +488,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
 
             self.state = 70
-            self.match(WorkspaceSymbolParser.Endmodule)
+            self.match(WorkspaceSymbolsParser.Endmodule)
             self.state = 72
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 71
                 self.label()
 
@@ -534,33 +513,25 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Interface(self):
-            return self.getToken(WorkspaceSymbolParser.Interface, 0)
+            return self.getToken(WorkspaceSymbolsParser.Interface, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endinterface(self):
-            return self.getToken(WorkspaceSymbolParser.Endinterface, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endinterface, 0)
 
         def parameter_port_list(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Parameter_port_listContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Parameter_port_listContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_interface_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInterface_declaration" ):
-                listener.enterInterface_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInterface_declaration" ):
-                listener.exitInterface_declaration(self)
+            return WorkspaceSymbolsParser.RULE_interface_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitInterface_declaration" ):
@@ -573,13 +544,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def interface_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Interface_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Interface_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_interface_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 74
-            self.match(WorkspaceSymbolParser.Interface)
+            self.match(WorkspaceSymbolsParser.Interface)
             self.state = 75
             self.identifier()
             self.state = 77
@@ -602,11 +573,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
 
             self.state = 85
-            self.match(WorkspaceSymbolParser.Endinterface)
+            self.match(WorkspaceSymbolsParser.Endinterface)
             self.state = 87
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 86
                 self.label()
 
@@ -627,33 +598,25 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Program(self):
-            return self.getToken(WorkspaceSymbolParser.Program, 0)
+            return self.getToken(WorkspaceSymbolsParser.Program, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endprogram(self):
-            return self.getToken(WorkspaceSymbolParser.Endprogram, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endprogram, 0)
 
         def life_time(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Life_timeContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Life_timeContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_program_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram_declaration" ):
-                listener.enterProgram_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram_declaration" ):
-                listener.exitProgram_declaration(self)
+            return WorkspaceSymbolsParser.RULE_program_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitProgram_declaration" ):
@@ -666,17 +629,17 @@ class WorkspaceSymbolParser ( Parser ):
 
     def program_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Program_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Program_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_program_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 89
-            self.match(WorkspaceSymbolParser.Program)
+            self.match(WorkspaceSymbolsParser.Program)
             self.state = 91
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.T__4 or _la==WorkspaceSymbolParser.T__5:
+            if _la==WorkspaceSymbolsParser.T__2 or _la==WorkspaceSymbolsParser.T__3:
                 self.state = 90
                 self.life_time()
 
@@ -695,11 +658,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
 
             self.state = 100
-            self.match(WorkspaceSymbolParser.Endprogram)
+            self.match(WorkspaceSymbolsParser.Endprogram)
             self.state = 102
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 101
                 self.label()
 
@@ -720,29 +683,21 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Package(self):
-            return self.getToken(WorkspaceSymbolParser.Package, 0)
+            return self.getToken(WorkspaceSymbolsParser.Package, 0)
 
         def Endpackage(self):
-            return self.getToken(WorkspaceSymbolParser.Endpackage, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endpackage, 0)
 
         def package_item(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Package_itemContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Package_itemContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_package_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPackage_declaration" ):
-                listener.enterPackage_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPackage_declaration" ):
-                listener.exitPackage_declaration(self)
+            return WorkspaceSymbolsParser.RULE_package_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPackage_declaration" ):
@@ -755,13 +710,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def package_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Package_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Package_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_package_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 104
-            self.match(WorkspaceSymbolParser.Package)
+            self.match(WorkspaceSymbolsParser.Package)
             self.state = 112
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
@@ -786,11 +741,11 @@ class WorkspaceSymbolParser ( Parser ):
 
 
             self.state = 114
-            self.match(WorkspaceSymbolParser.Endpackage)
+            self.match(WorkspaceSymbolsParser.Endpackage)
             self.state = 116
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 115
                 self.label()
 
@@ -811,29 +766,21 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Config(self):
-            return self.getToken(WorkspaceSymbolParser.Config, 0)
+            return self.getToken(WorkspaceSymbolsParser.Config, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endconfig(self):
-            return self.getToken(WorkspaceSymbolParser.Endconfig, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endconfig, 0)
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_config_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConfig_declaration" ):
-                listener.enterConfig_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConfig_declaration" ):
-                listener.exitConfig_declaration(self)
+            return WorkspaceSymbolsParser.RULE_config_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitConfig_declaration" ):
@@ -846,13 +793,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def config_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Config_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Config_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_config_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 118
-            self.match(WorkspaceSymbolParser.Config)
+            self.match(WorkspaceSymbolsParser.Config)
             self.state = 119
             self.identifier()
             self.state = 123
@@ -867,11 +814,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,14,self._ctx)
 
             self.state = 126
-            self.match(WorkspaceSymbolParser.Endconfig)
+            self.match(WorkspaceSymbolsParser.Endconfig)
             self.state = 128
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 127
                 self.label()
 
@@ -892,33 +839,28 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Class(self):
-            return self.getToken(WorkspaceSymbolParser.Class, 0)
+            return self.getToken(WorkspaceSymbolsParser.Class, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endclass(self):
-            return self.getToken(WorkspaceSymbolParser.Endclass, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endclass, 0)
+
+        def Virtual(self):
+            return self.getToken(WorkspaceSymbolsParser.Virtual, 0)
 
         def life_time(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Life_timeContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Life_timeContext,0)
 
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_class_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterClass_declaration" ):
-                listener.enterClass_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitClass_declaration" ):
-                listener.exitClass_declaration(self)
+            return WorkspaceSymbolsParser.RULE_class_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitClass_declaration" ):
@@ -931,7 +873,7 @@ class WorkspaceSymbolParser ( Parser ):
 
     def class_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Class_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Class_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_class_declaration)
         self._la = 0 # Token type
         try:
@@ -939,17 +881,17 @@ class WorkspaceSymbolParser ( Parser ):
             self.state = 131
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.T__0:
+            if _la==WorkspaceSymbolsParser.Virtual:
                 self.state = 130
-                self.match(WorkspaceSymbolParser.T__0)
+                self.match(WorkspaceSymbolsParser.Virtual)
 
 
             self.state = 133
-            self.match(WorkspaceSymbolParser.Class)
+            self.match(WorkspaceSymbolsParser.Class)
             self.state = 135
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.T__4 or _la==WorkspaceSymbolParser.T__5:
+            if _la==WorkspaceSymbolsParser.T__2 or _la==WorkspaceSymbolsParser.T__3:
                 self.state = 134
                 self.life_time()
 
@@ -968,11 +910,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
 
             self.state = 144
-            self.match(WorkspaceSymbolParser.Endclass)
+            self.match(WorkspaceSymbolsParser.Endclass)
             self.state = 146
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 145
                 self.label()
 
@@ -993,29 +935,21 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Primitive(self):
-            return self.getToken(WorkspaceSymbolParser.Primitive, 0)
+            return self.getToken(WorkspaceSymbolsParser.Primitive, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endprimitive(self):
-            return self.getToken(WorkspaceSymbolParser.Endprimitive, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endprimitive, 0)
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_udp_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUdp_declaration" ):
-                listener.enterUdp_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUdp_declaration" ):
-                listener.exitUdp_declaration(self)
+            return WorkspaceSymbolsParser.RULE_udp_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitUdp_declaration" ):
@@ -1028,13 +962,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def udp_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Udp_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Udp_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_udp_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 148
-            self.match(WorkspaceSymbolParser.Primitive)
+            self.match(WorkspaceSymbolsParser.Primitive)
             self.state = 149
             self.identifier()
             self.state = 153
@@ -1049,11 +983,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
 
             self.state = 156
-            self.match(WorkspaceSymbolParser.Endprimitive)
+            self.match(WorkspaceSymbolsParser.Endprimitive)
             self.state = 158
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 157
                 self.label()
 
@@ -1074,31 +1008,23 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def task_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Task_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Task_declarationContext,0)
 
 
         def function_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Function_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Function_declarationContext,0)
 
 
         def class_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Class_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Class_declarationContext,0)
 
 
         def type_declaration(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Type_declarationContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Type_declarationContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_package_item
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPackage_item" ):
-                listener.enterPackage_item(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPackage_item" ):
-                listener.exitPackage_item(self)
+            return WorkspaceSymbolsParser.RULE_package_item
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPackage_item" ):
@@ -1111,28 +1037,28 @@ class WorkspaceSymbolParser ( Parser ):
 
     def package_item(self):
 
-        localctx = WorkspaceSymbolParser.Package_itemContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Package_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_package_item)
         try:
             self.state = 164
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [WorkspaceSymbolParser.Task]:
+            if token in [WorkspaceSymbolsParser.Task]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 160
                 self.task_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.Function]:
+            elif token in [WorkspaceSymbolsParser.Function]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 161
                 self.function_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.T__0, WorkspaceSymbolParser.Class]:
+            elif token in [WorkspaceSymbolsParser.Class, WorkspaceSymbolsParser.Virtual]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 162
                 self.class_declaration()
                 pass
-            elif token in [WorkspaceSymbolParser.T__1]:
+            elif token in [WorkspaceSymbolsParser.Typedef]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 163
                 self.type_declaration()
@@ -1156,29 +1082,21 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Task(self):
-            return self.getToken(WorkspaceSymbolParser.Task, 0)
+            return self.getToken(WorkspaceSymbolsParser.Task, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Endtask(self):
-            return self.getToken(WorkspaceSymbolParser.Endtask, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endtask, 0)
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_task_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTask_declaration" ):
-                listener.enterTask_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTask_declaration" ):
-                listener.exitTask_declaration(self)
+            return WorkspaceSymbolsParser.RULE_task_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitTask_declaration" ):
@@ -1191,13 +1109,13 @@ class WorkspaceSymbolParser ( Parser ):
 
     def task_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Task_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Task_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_task_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 166
-            self.match(WorkspaceSymbolParser.Task)
+            self.match(WorkspaceSymbolsParser.Task)
             self.state = 167
             self.identifier()
             self.state = 171
@@ -1212,11 +1130,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
 
             self.state = 174
-            self.match(WorkspaceSymbolParser.Endtask)
+            self.match(WorkspaceSymbolsParser.Endtask)
             self.state = 176
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 175
                 self.label()
 
@@ -1237,36 +1155,28 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Function(self):
-            return self.getToken(WorkspaceSymbolParser.Function, 0)
+            return self.getToken(WorkspaceSymbolsParser.Function, 0)
 
         def return_val(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.Return_valContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.Return_valContext,0)
 
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def OpenParen(self):
-            return self.getToken(WorkspaceSymbolParser.OpenParen, 0)
+            return self.getToken(WorkspaceSymbolsParser.OpenParen, 0)
 
         def Endfunction(self):
-            return self.getToken(WorkspaceSymbolParser.Endfunction, 0)
+            return self.getToken(WorkspaceSymbolsParser.Endfunction, 0)
 
         def label(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.LabelContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.LabelContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_function_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunction_declaration" ):
-                listener.enterFunction_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunction_declaration" ):
-                listener.exitFunction_declaration(self)
+            return WorkspaceSymbolsParser.RULE_function_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFunction_declaration" ):
@@ -1279,19 +1189,19 @@ class WorkspaceSymbolParser ( Parser ):
 
     def function_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Function_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Function_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_function_declaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 178
-            self.match(WorkspaceSymbolParser.Function)
+            self.match(WorkspaceSymbolsParser.Function)
             self.state = 179
             self.return_val()
             self.state = 180
             self.identifier()
             self.state = 181
-            self.match(WorkspaceSymbolParser.OpenParen)
+            self.match(WorkspaceSymbolsParser.OpenParen)
             self.state = 185
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
@@ -1304,11 +1214,11 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,25,self._ctx)
 
             self.state = 188
-            self.match(WorkspaceSymbolParser.Endfunction)
+            self.match(WorkspaceSymbolsParser.Endfunction)
             self.state = 190
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.Colon:
+            if _la==WorkspaceSymbolsParser.Colon:
                 self.state = 189
                 self.label()
 
@@ -1328,23 +1238,18 @@ class WorkspaceSymbolParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def Typedef(self):
+            return self.getToken(WorkspaceSymbolsParser.Typedef, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def SemiColon(self):
-            return self.getToken(WorkspaceSymbolParser.SemiColon, 0)
+            return self.getToken(WorkspaceSymbolsParser.SemiColon, 0)
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_type_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterType_declaration" ):
-                listener.enterType_declaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitType_declaration" ):
-                listener.exitType_declaration(self)
+            return WorkspaceSymbolsParser.RULE_type_declaration
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitType_declaration" ):
@@ -1357,12 +1262,12 @@ class WorkspaceSymbolParser ( Parser ):
 
     def type_declaration(self):
 
-        localctx = WorkspaceSymbolParser.Type_declarationContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Type_declarationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_type_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 192
-            self.match(WorkspaceSymbolParser.T__1)
+            self.match(WorkspaceSymbolsParser.Typedef)
             self.state = 196
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
@@ -1377,7 +1282,7 @@ class WorkspaceSymbolParser ( Parser ):
             self.state = 199
             self.identifier()
             self.state = 200
-            self.match(WorkspaceSymbolParser.SemiColon)
+            self.match(WorkspaceSymbolsParser.SemiColon)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1394,18 +1299,10 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def CloseParen(self):
-            return self.getToken(WorkspaceSymbolParser.CloseParen, 0)
+            return self.getToken(WorkspaceSymbolsParser.CloseParen, 0)
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_parameter_port_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterParameter_port_list" ):
-                listener.enterParameter_port_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitParameter_port_list" ):
-                listener.exitParameter_port_list(self)
+            return WorkspaceSymbolsParser.RULE_parameter_port_list
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitParameter_port_list" ):
@@ -1418,12 +1315,12 @@ class WorkspaceSymbolParser ( Parser ):
 
     def parameter_port_list(self):
 
-        localctx = WorkspaceSymbolParser.Parameter_port_listContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Parameter_port_listContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_parameter_port_list)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 202
-            self.match(WorkspaceSymbolParser.T__2)
+            self.match(WorkspaceSymbolsParser.T__0)
             self.state = 206
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
@@ -1436,7 +1333,7 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,28,self._ctx)
 
             self.state = 209
-            self.match(WorkspaceSymbolParser.CloseParen)
+            self.match(WorkspaceSymbolsParser.CloseParen)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1453,21 +1350,13 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def OpenParen(self):
-            return self.getToken(WorkspaceSymbolParser.OpenParen, 0)
+            return self.getToken(WorkspaceSymbolsParser.OpenParen, 0)
 
         def CloseParen(self):
-            return self.getToken(WorkspaceSymbolParser.CloseParen, 0)
+            return self.getToken(WorkspaceSymbolsParser.CloseParen, 0)
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_port_list
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPort_list" ):
-                listener.enterPort_list(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPort_list" ):
-                listener.exitPort_list(self)
+            return WorkspaceSymbolsParser.RULE_port_list
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPort_list" ):
@@ -1480,12 +1369,12 @@ class WorkspaceSymbolParser ( Parser ):
 
     def port_list(self):
 
-        localctx = WorkspaceSymbolParser.Port_listContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Port_listContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_port_list)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 211
-            self.match(WorkspaceSymbolParser.OpenParen)
+            self.match(WorkspaceSymbolsParser.OpenParen)
             self.state = 215
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
@@ -1498,7 +1387,7 @@ class WorkspaceSymbolParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
 
             self.state = 218
-            self.match(WorkspaceSymbolParser.CloseParen)
+            self.match(WorkspaceSymbolsParser.CloseParen)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1516,15 +1405,7 @@ class WorkspaceSymbolParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_return_val
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReturn_val" ):
-                listener.enterReturn_val(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReturn_val" ):
-                listener.exitReturn_val(self)
+            return WorkspaceSymbolsParser.RULE_return_val
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitReturn_val" ):
@@ -1537,7 +1418,7 @@ class WorkspaceSymbolParser ( Parser ):
 
     def return_val(self):
 
-        localctx = WorkspaceSymbolParser.Return_valContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Return_valContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_return_val)
         try:
             self.state = 227
@@ -1546,7 +1427,7 @@ class WorkspaceSymbolParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 220
-                self.match(WorkspaceSymbolParser.T__3)
+                self.match(WorkspaceSymbolsParser.T__1)
                 pass
 
             elif la_ == 2:
@@ -1582,15 +1463,7 @@ class WorkspaceSymbolParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_life_time
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLife_time" ):
-                listener.enterLife_time(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLife_time" ):
-                listener.exitLife_time(self)
+            return WorkspaceSymbolsParser.RULE_life_time
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitLife_time" ):
@@ -1603,14 +1476,14 @@ class WorkspaceSymbolParser ( Parser ):
 
     def life_time(self):
 
-        localctx = WorkspaceSymbolParser.Life_timeContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Life_timeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_life_time)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 229
             _la = self._input.LA(1)
-            if not(_la==WorkspaceSymbolParser.T__4 or _la==WorkspaceSymbolParser.T__5):
+            if not(_la==WorkspaceSymbolsParser.T__2 or _la==WorkspaceSymbolsParser.T__3):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1631,18 +1504,10 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Word(self):
-            return self.getToken(WorkspaceSymbolParser.Word, 0)
+            return self.getToken(WorkspaceSymbolsParser.Word, 0)
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_identifier
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifier" ):
-                listener.enterIdentifier(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifier" ):
-                listener.exitIdentifier(self)
+            return WorkspaceSymbolsParser.RULE_identifier
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitIdentifier" ):
@@ -1655,12 +1520,12 @@ class WorkspaceSymbolParser ( Parser ):
 
     def identifier(self):
 
-        localctx = WorkspaceSymbolParser.IdentifierContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.IdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_identifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 231
-            self.match(WorkspaceSymbolParser.Word)
+            self.match(WorkspaceSymbolsParser.Word)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1677,22 +1542,14 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def Colon(self):
-            return self.getToken(WorkspaceSymbolParser.Colon, 0)
+            return self.getToken(WorkspaceSymbolsParser.Colon, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_label
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLabel" ):
-                listener.enterLabel(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLabel" ):
-                listener.exitLabel(self)
+            return WorkspaceSymbolsParser.RULE_label
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitLabel" ):
@@ -1705,12 +1562,12 @@ class WorkspaceSymbolParser ( Parser ):
 
     def label(self):
 
-        localctx = WorkspaceSymbolParser.LabelContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.LabelContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_label)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 233
-            self.match(WorkspaceSymbolParser.Colon)
+            self.match(WorkspaceSymbolsParser.Colon)
             self.state = 234
             self.identifier()
         except RecognitionException as re:
@@ -1729,38 +1586,30 @@ class WorkspaceSymbolParser ( Parser ):
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(WorkspaceSymbolParser.IdentifierContext,0)
+            return self.getTypedRuleContext(WorkspaceSymbolsParser.IdentifierContext,0)
 
 
         def Dot(self, i:int=None):
             if i is None:
-                return self.getTokens(WorkspaceSymbolParser.Dot)
+                return self.getTokens(WorkspaceSymbolsParser.Dot)
             else:
-                return self.getToken(WorkspaceSymbolParser.Dot, i)
+                return self.getToken(WorkspaceSymbolsParser.Dot, i)
 
         def Word(self, i:int=None):
             if i is None:
-                return self.getTokens(WorkspaceSymbolParser.Word)
+                return self.getTokens(WorkspaceSymbolsParser.Word)
             else:
-                return self.getToken(WorkspaceSymbolParser.Word, i)
+                return self.getToken(WorkspaceSymbolsParser.Word, i)
 
         def constant_bit_select(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(WorkspaceSymbolParser.Constant_bit_selectContext)
+                return self.getTypedRuleContexts(WorkspaceSymbolsParser.Constant_bit_selectContext)
             else:
-                return self.getTypedRuleContext(WorkspaceSymbolParser.Constant_bit_selectContext,i)
+                return self.getTypedRuleContext(WorkspaceSymbolsParser.Constant_bit_selectContext,i)
 
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_hierarchical_identifier
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHierarchical_identifier" ):
-                listener.enterHierarchical_identifier(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHierarchical_identifier" ):
-                listener.exitHierarchical_identifier(self)
+            return WorkspaceSymbolsParser.RULE_hierarchical_identifier
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitHierarchical_identifier" ):
@@ -1773,7 +1622,7 @@ class WorkspaceSymbolParser ( Parser ):
 
     def hierarchical_identifier(self):
 
-        localctx = WorkspaceSymbolParser.Hierarchical_identifierContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Hierarchical_identifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_hierarchical_identifier)
         self._la = 0 # Token type
         try:
@@ -1781,11 +1630,11 @@ class WorkspaceSymbolParser ( Parser ):
             self.state = 238
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==WorkspaceSymbolParser.T__6:
+            if _la==WorkspaceSymbolsParser.T__4:
                 self.state = 236
-                self.match(WorkspaceSymbolParser.T__6)
+                self.match(WorkspaceSymbolsParser.T__4)
                 self.state = 237
-                self.match(WorkspaceSymbolParser.Dot)
+                self.match(WorkspaceSymbolsParser.Dot)
 
 
             self.state = 246
@@ -1794,11 +1643,11 @@ class WorkspaceSymbolParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 240
-                    self.match(WorkspaceSymbolParser.Word)
+                    self.match(WorkspaceSymbolsParser.Word)
                     self.state = 241
                     self.constant_bit_select()
                     self.state = 242
-                    self.match(WorkspaceSymbolParser.Dot) 
+                    self.match(WorkspaceSymbolsParser.Dot) 
                 self.state = 248
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
@@ -1822,32 +1671,24 @@ class WorkspaceSymbolParser ( Parser ):
 
         def OpenBracket(self, i:int=None):
             if i is None:
-                return self.getTokens(WorkspaceSymbolParser.OpenBracket)
+                return self.getTokens(WorkspaceSymbolsParser.OpenBracket)
             else:
-                return self.getToken(WorkspaceSymbolParser.OpenBracket, i)
+                return self.getToken(WorkspaceSymbolsParser.OpenBracket, i)
 
         def Word(self, i:int=None):
             if i is None:
-                return self.getTokens(WorkspaceSymbolParser.Word)
+                return self.getTokens(WorkspaceSymbolsParser.Word)
             else:
-                return self.getToken(WorkspaceSymbolParser.Word, i)
+                return self.getToken(WorkspaceSymbolsParser.Word, i)
 
         def CloseBracket(self, i:int=None):
             if i is None:
-                return self.getTokens(WorkspaceSymbolParser.CloseBracket)
+                return self.getTokens(WorkspaceSymbolsParser.CloseBracket)
             else:
-                return self.getToken(WorkspaceSymbolParser.CloseBracket, i)
+                return self.getToken(WorkspaceSymbolsParser.CloseBracket, i)
 
         def getRuleIndex(self):
-            return WorkspaceSymbolParser.RULE_constant_bit_select
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConstant_bit_select" ):
-                listener.enterConstant_bit_select(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConstant_bit_select" ):
-                listener.exitConstant_bit_select(self)
+            return WorkspaceSymbolsParser.RULE_constant_bit_select
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitConstant_bit_select" ):
@@ -1860,7 +1701,7 @@ class WorkspaceSymbolParser ( Parser ):
 
     def constant_bit_select(self):
 
-        localctx = WorkspaceSymbolParser.Constant_bit_selectContext(self, self._ctx, self.state)
+        localctx = WorkspaceSymbolsParser.Constant_bit_selectContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_constant_bit_select)
         self._la = 0 # Token type
         try:
@@ -1868,13 +1709,13 @@ class WorkspaceSymbolParser ( Parser ):
             self.state = 256
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==WorkspaceSymbolParser.OpenBracket:
+            while _la==WorkspaceSymbolsParser.OpenBracket:
                 self.state = 251
-                self.match(WorkspaceSymbolParser.OpenBracket)
+                self.match(WorkspaceSymbolsParser.OpenBracket)
                 self.state = 252
-                self.match(WorkspaceSymbolParser.Word)
+                self.match(WorkspaceSymbolsParser.Word)
                 self.state = 253
-                self.match(WorkspaceSymbolParser.CloseBracket)
+                self.match(WorkspaceSymbolsParser.CloseBracket)
                 self.state = 258
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)

@@ -1,4 +1,4 @@
-grammar WorkspaceSymbol;
+grammar WorkspaceSymbols;
 
 import LexerRules;
 

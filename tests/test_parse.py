@@ -3,22 +3,22 @@ import time
 import unittest
 import pathlib
 
-from verilog_langserver.verilog_parser.parser import Parser
+import verilog_langserver
+
 
 
 class TestParser(unittest.TestCase):
 
     report_time = True
-    diagnosis = True
+    diagnosis = False
 
     def setUp(self):
         self.folder = pathlib.Path(__file__).parent / 'verilog'
-        self.parser = Parser()
 
     def test_symbols(self):
         starttime = time.time()
-        for fn in [f.path for f in os.scandir(self.folder) if not f.is_dir()]:
-            _ = self.parser.parse_fast(fn)
+        for uri in [f.path for f in os.scandir(self.folder) if not f.is_dir()]:
+            _ = verilog_langserver.verilog_parser.workspace_symbols.parse(uri)
         if self.report_time:
             print("test_symbols:", time.time()-starttime, "seconds")
 
@@ -28,7 +28,7 @@ class TestParser(unittest.TestCase):
             s = os.path.split(fn)[-1]
             print(s , '...', end=' ')
             starttime = time.time()
-            items = self.parser.parse_diagnosis(fn)
+            items = verilog_langserver.verilog_parser.diagnosis.parse(fn)
             print(f'{time.time()-starttime}s')
             for i in items:
                 print('\t' + i.message)

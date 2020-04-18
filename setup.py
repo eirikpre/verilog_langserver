@@ -22,11 +22,13 @@ class AntlrCompile(distutils.cmd.Command):
     def run(self):
         base_path = str(Path(os.getcwd()) / 'verilog_langserver' / 'verilog_parser')
         base_cmd = 'java -cp antlr-4.8-complete.jar org.antlr.v4.Tool -Dlanguage=Python3 '
+        commands = [
+            base_cmd + f'-visitor -no-listener -o {base_path}/antlr_build {base_path}/grammar/WorkspaceSymbols.g4',
+            base_cmd + f'-visitor -no-listener -o {base_path}/antlr_build {base_path}/grammar/DocumentSymbols.g4',
+            base_cmd + f'-o  {base_path}/antlr_build/diagnosis {base_path}/grammar/diagnosis/SystemVerilog.g4',
+        ]
 
-        diagnosis_cmd = base_cmd + f'-o  {base_path}/antlr_build/diagnosis {base_path}/grammar/diagnosis/SystemVerilog.g4'
-        symbol_cmd = base_cmd + f'-visitor -o {base_path}/antlr_build {base_path}/grammar/WorkspaceSymbol.g4'
-
-        for cmd in [diagnosis_cmd, symbol_cmd]:
+        for cmd in commands:
             subprocess.check_call(
                 cmd.split()
             )
