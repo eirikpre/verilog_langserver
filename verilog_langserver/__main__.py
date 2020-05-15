@@ -3,7 +3,7 @@ import logging
 
 from .server import server
 
-logging.basicConfig(filename="pygls.log", level=logging.DEBUG, filemode="w")
+logging.basicConfig(filename="pygls.log", level=logging.DEBUG, filemode="w+")
 
 
 def add_arguments(parser):
@@ -28,7 +28,7 @@ def main():
     add_arguments(parser)
     args = parser.parse_args()
 
-    if args.tcp or True:
+    if args.tcp:
         server.start_tcp(args.host, args.port)
     else:
         server.start_io()

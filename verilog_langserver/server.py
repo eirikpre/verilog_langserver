@@ -35,15 +35,13 @@ def buildIndex(ls):
 
 @server.feature(DOCUMENT_SYMBOL)
 async def document_symbols(ls, params: DocumentSymbolParams):
-    # TODO Not ready yet
-    # doc: Document = ls.workspace.get_document(params.textDocument.uri)
-    # items = parse_document_symbols(doc.source)
-    path = to_fs_path(params.textDocument.uri)
-    return parse_workspace_symbols(path)
+    doc: Document = ls.workspace.get_document(params.textDocument.uri)
+    return parse_document_symbols(doc.source)
 
 @server.feature(WORKSPACE_SYMBOL)
 async def workspace_symbols(ls, params: WorkspaceSymbolParams):
-    query = params.query
-    if database.declarations == []:
-        return None
-    return database.declarations
+    # query = params.query
+    # if database.declarations == []:
+    #     return None
+    path = to_fs_path("file:///c%3A/Users/eirik/Desktop/VSCode-SystemVerilog/verilog-examples/driver.sv")
+    return parse_workspace_symbols(path)

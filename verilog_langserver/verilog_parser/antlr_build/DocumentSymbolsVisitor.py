@@ -54,8 +54,8 @@ class DocumentSymbolsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by DocumentSymbolsParser#package_item.
-    def visitPackage_item(self, ctx:DocumentSymbolsParser.Package_itemContext):
+    # Visit a parse tree produced by DocumentSymbolsParser#item.
+    def visitItem(self, ctx:DocumentSymbolsParser.ItemContext):
         return self.visitChildren(ctx)
 
 

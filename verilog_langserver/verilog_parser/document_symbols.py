@@ -1,3 +1,4 @@
+import logging
 import antlr4
 from pygls.types import Location, DocumentSymbol, Range, Position, SymbolKind
 
@@ -27,30 +28,33 @@ class VerilogVisitor(Visitor):
     def visit_symbol(self, ctx: antlr4.ParserRuleContext, kind:int=SymbolKind.Variable, visit_children:bool=True):
         id_ctx = ctx.getChild(0, Parser.IdentifierContext)
 
-        symbol =  DocumentSymbol(
+
+        symbol = DocumentSymbol(
             name=id_ctx.start.text,
             kind=kind,
             range=Range(
-                start=Position(ctx.start.line, ctx.start.column),
-                end=Position(ctx.stop.line, ctx.stop.column)
+                start=Position(ctx.start.line-1, ctx.start.column),
+                end=Position(ctx.stop.line-1, ctx.stop.column)
             ),
             selection_range=Range(
-                start=Position(id_ctx.start.line, id_ctx.start.column),
-                end=Position(id_ctx.stop.line, id_ctx.stop.column)
+                start=Position(id_ctx.start.line-1, id_ctx.start.column),
+                end=Position(id_ctx.stop.line-1, id_ctx.stop.column)
             ),
-            detail=None,
+            detail="",
             children=[],
             deprecated=False
         )
 
+        logging.debug(f"found symbol: {symbol.name}")
         self.scope.append(symbol)
 
         if visit_children:
+            logging.debug(f"Visiting children of symbol: {symbol.name}")
             prev_scope = self.scope
             self.scope = symbol.children
             res = self.visitChildren(ctx)
             self.scope = prev_scope
-            return res
+        return res
 
 
     def visitModule_declaration(self, ctx:Parser.Module_declarationContext):
