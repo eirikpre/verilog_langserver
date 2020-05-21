@@ -22,16 +22,16 @@ class TestParser(unittest.TestCase):
         if self.report_time:
             print("test_symbols:", time.time()-starttime, "seconds")
 
-    @unittest.skipUnless(diagnosis, "Not diagnosis")
-    def test_diagnosis(self):
-        for fn in [f.path for f in os.scandir(self.folder) if not f.is_dir()][0:1]:
-            s = os.path.split(fn)[-1]
-            print(s , '...', end=' ')
-            starttime = time.time()
-            items = verilog_langserver.verilog_parser.diagnosis.parse(fn)
-            print(f'{time.time()-starttime}s')
-            for i in items:
-                print('\t' + i.message)
+    # @unittest.skipUnless(diagnosis, "Not diagnosis")
+    # def test_diagnosis(self):
+    #     for fn in [f.path for f in os.scandir(self.folder) if not f.is_dir()][0:1]:
+    #         s = os.path.split(fn)[-1]
+    #         print(s , '...', end=' ')
+    #         starttime = time.time()
+    #         items = verilog_langserver.verilog_parser.diagnosis.parse(fn)
+    #         print(f'{time.time()-starttime}s')
+    #         for i in items:
+    #             print('\t' + i.message)
 
 if __name__ == '__main__':
     unittest.main()

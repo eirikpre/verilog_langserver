@@ -44,13 +44,13 @@ class DocumentSymbolsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by DocumentSymbolsParser#class_declaration.
-    def visitClass_declaration(self, ctx:DocumentSymbolsParser.Class_declarationContext):
+    # Visit a parse tree produced by DocumentSymbolsParser#udp_declaration.
+    def visitUdp_declaration(self, ctx:DocumentSymbolsParser.Udp_declarationContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by DocumentSymbolsParser#udp_declaration.
-    def visitUdp_declaration(self, ctx:DocumentSymbolsParser.Udp_declarationContext):
+    # Visit a parse tree produced by DocumentSymbolsParser#class_declaration.
+    def visitClass_declaration(self, ctx:DocumentSymbolsParser.Class_declarationContext):
         return self.visitChildren(ctx)
 
 
@@ -74,8 +74,8 @@ class DocumentSymbolsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by DocumentSymbolsParser#parameter_port_list.
-    def visitParameter_port_list(self, ctx:DocumentSymbolsParser.Parameter_port_listContext):
+    # Visit a parse tree produced by DocumentSymbolsParser#parameter_list.
+    def visitParameter_list(self, ctx:DocumentSymbolsParser.Parameter_listContext):
         return self.visitChildren(ctx)
 
 
@@ -91,6 +91,21 @@ class DocumentSymbolsVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by DocumentSymbolsParser#life_time.
     def visitLife_time(self, ctx:DocumentSymbolsParser.Life_timeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by DocumentSymbolsParser#attribute.
+    def visitAttribute(self, ctx:DocumentSymbolsParser.AttributeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by DocumentSymbolsParser#instantiation.
+    def visitInstantiation(self, ctx:DocumentSymbolsParser.InstantiationContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by DocumentSymbolsParser#type_identifier.
+    def visitType_identifier(self, ctx:DocumentSymbolsParser.Type_identifierContext):
         return self.visitChildren(ctx)
 
 

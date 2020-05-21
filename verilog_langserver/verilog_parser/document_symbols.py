@@ -28,7 +28,6 @@ class VerilogVisitor(Visitor):
     def visit_symbol(self, ctx: antlr4.ParserRuleContext, kind:int=SymbolKind.Variable, visit_children:bool=True):
         id_ctx = ctx.getChild(0, Parser.IdentifierContext)
 
-
         symbol = DocumentSymbol(
             name=id_ctx.start.text,
             kind=kind,
@@ -86,3 +85,26 @@ class VerilogVisitor(Visitor):
 
     def visitType_declaration(self, ctx:Parser.Type_declarationContext):
         return self.visit_symbol(ctx, 25, True)
+
+    def visitInstantiation(self, ctx:Parser.InstantiationContext):
+        for child in ctx.getChildren(lambda x: isinstance(x, Parser.IdentifierContext)):
+            symbol = DocumentSymbol(
+                name=child.start.text,
+                kind=SymbolKind.Variable,
+                range=Range(
+                    start=Position(ctx.start.line-1, ctx.start.column),
+                    end=Position(ctx.stop.line-1, ctx.stop.column)
+                ),
+                selection_range=Range(
+                    start=Position(child.start.line-1, child.start.column),
+                    end=Position(child.stop.line-1, child.stop.column)
+                ),
+                detail="",
+                children=[],
+                deprecated=False
+            )
+            logging.debug(f"found symbol: {symbol.name}")
+            self.scope.append(symbol)
+
+        return None
+
